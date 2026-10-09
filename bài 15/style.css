@@ -1,0 +1,37 @@
+/* 1. Đặt đường viền và gộp đường viền cho bảng */
+table {
+  width: 100%; /* Đặt chiều rộng bảng chiếm 100% */
+  border-collapse: collapse; /* Gộp các đường viền liền kề */
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+}
+
+/* Định dạng chung cho cả ô tiêu đề (th) và ô dữ liệu (td) */
+table,
+th,
+td {
+  border: 1px solid #ddd; /* Đường viền xám nhạt */
+}
+
+/* 2. Chiều cao, padding và căn chỉnh cho ô tiêu đề (th) */
+th {
+  height: 50px; /* Chiều cao tối thiểu cho hàng tiêu đề */
+  background-color: #333333; /* Nền tối */
+  color: #ffffff; /* Chữ màu trắng */
+  text-align: left; /* Căn trái văn bản tiêu đề */
+  padding: 12px 15px; /* Khoảng cách giữa chữ và đường viền */
+}
+
+/* 3. Padding, chiều cao, màu sắc và căn chỉnh cho ô dữ liệu (td) */
+td {
+  height: 60px; /* Thiết lập chiều cao ô */
+  padding: 12px 15px; /* Khoảng cách padding */
+  vertical-align: bottom; /* Căn văn bản xuống phía dưới theo chiều dọc */
+  background-color: #f9f9f9; /* Nền xám nhạt */
+  color: #333333; /* Màu chữ xám đậm */
+}
+
+/* Hiệu ứng di chuột đổi màu hàng (tùy chọn giúp bảng đẹp hơn) */
+tr:hover td {
+  background-color: #f1f1f1;
+}
