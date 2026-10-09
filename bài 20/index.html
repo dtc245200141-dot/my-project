@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Web Xem Hoạt Hình Trực Tuyến</title>
+    <!-- Liên kết tới tệp style.css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header cố định bao gồm Logo và Head-link -->
+    <header class="main-header">
+      <div class="logo">
+        <h2>🎬 Hoạt Hình Vietsub</h2>
+      </div>
+      <nav class="head-link">
+        <ul>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Mới cập nhật</a></li>
+          <li><a href="#">Xem nhiều nhất</a></li>
+          <li><a href="#">Thể loại</a></li>
+          <li><a href="#">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Khu vực nội dung chính: Bố cục Left Content & Right Content -->
+    <div class="content-container">
+      <!-- Left Content: Danh sách menu phim có sẵn -->
+      <aside class="left-content">
+        <h3>Danh Sách Phim</h3>
+        <ul class="video-list">
+          <li class="active"><a href="#video1">01. Tom & Jerry - Tập 1</a></li>
+          <li><a href="#video2">02. Doraemon - Phim Ngắn</a></li>
+          <li><a href="#video3">03. Oggy & Những Chú Gián</a></li>
+          <li><a href="#video4">04. Hãy Đợi Đấy! (Nu, Pogodi!)</a></li>
+          <li><a href="#video5">05. Pikachu - Pokémon</a></li>
+        </ul>
+      </aside>
+
+      <!-- Right Content: Khu vực xem video chính -->
+      <main class="right-content">
+        <div class="video-player-container">
+          <h2>Đang phát: Tom & Jerry - Tập Đặc Biệt (Full HD)</h2>
+
+          <!-- Sử dụng iframe để nhúng video Youtube hoặc thẻ video HTML5 -->
+          <div class="iframe-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/t06RUxPew_c"
+              title="Tom & Jerry Video Player"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+
+          <div class="video-info">
+            <h3>Mô tả phim</h3>
+            <p>
+              Bộ phim hoạt hình kinh điển dành cho trẻ em với chất lượng FullHD
+              1080p, nội dung hấp dẫn, không quảng cáo, hoàn toàn miễn phí và an
+              toàn cho bé.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer thông tin bản quyền -->
+    <footer class="main-footer">
+      <p>
+        &copy; 2026 Hoạt Hình Trực Tuyến - Nội dung chọn lọc an toàn cho trẻ em.
+      </p>
+    </footer>
+  </body>
+</html>
