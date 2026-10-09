@@ -1,0 +1,88 @@
+/* Reset css cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Định dạng thanh Navbar trên Desktop */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333333;
+  padding: 15px 20px;
+  color: #ffffff;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
+/* Nút icon menu mặc định ẩn trên máy tính */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Responsive thiết kế dành riêng cho Mobile & Tablet (<= 768px) */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Mặc định ẩn menu danh sách trên mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333333;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+    border-top: 1px solid #444444;
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  /* Hiển thị nút biểu tượng ☰ trên mobile */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hiển thị menu khi JS kích hoạt class active */
+  .nav-links.active {
+    display: flex;
+  }
+}
