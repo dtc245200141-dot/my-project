@@ -1,0 +1,68 @@
+/* 1. Element Selector: Đổi màu nền & font chữ toàn trang */
+body {
+  background-color: #f0f4f8;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  padding: 30px;
+  line-height: 1.6;
+}
+
+/* 2. ID Selector: Căn giữa tiêu đề h1 */
+#main-title {
+  text-align: center;
+  color: #1e3d59;
+  font-size: 32px;
+}
+
+/* 3. Grouping Selector (Nhóm chọn h1, h2): Thêm khoảng cách lề */
+h1,
+h2 {
+  margin-bottom: 15px;
+}
+
+/* 4. Class Selector: Định dạng đoạn văn mô tả bản thân */
+.bio-text {
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+  text-align: center;
+  color: #555555;
+  font-size: 16px;
+}
+
+/* 5. Class Selector & Descendant Selector: Định dạng danh sách sở thích */
+.hobby-list {
+  list-style-type: square;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hobby-item {
+  color: #17a2b8; /* Màu xanh ngọc cho danh sách */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* 6. Class Selector: Định dạng nút bấm */
+.custom-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px 0;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* 7. Pseudo-class Selector (:hover): Hiệu ứng di chuột cho nút bấm */
+.custom-btn:hover {
+  background-color: #0056b3; /* Đổi sang màu xanh đậm hơn khi di chuột */
+  transform: translateY(-2px); /* Tạo hiệu ứng nổi lên nhẹ */
+}
