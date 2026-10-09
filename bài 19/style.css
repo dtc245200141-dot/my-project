@@ -1,0 +1,56 @@
+/* 1. Thiết lập màu nền toàn trang web */
+body {
+  background-color: #eef2f5; /* Màu nền xám xanh nhạt dịu mắt */
+  font-family: Arial, sans-serif;
+  color: #333333;
+  margin: 0;
+  padding: 40px 20px;
+  text-align: center; /* Căn giữa tiêu đề và đoạn văn */
+}
+
+/* Định dạng tiêu đề và đoạn văn mô tả */
+h1 {
+  color: #1e3d59;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  color: #555555;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+/* 2. Khối div quan trọng: Thiết lập ảnh nền và căn giữa */
+.important-box {
+  /* Căn giữa khối div ra giữa màn hình */
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px 30px;
+
+  /* Thiết lập ảnh nền dạng SVG phủ mờ (không lo bị lỗi thiếu file ảnh) */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect width='100%25' height='100%25' fill='%2317a2b8'/%3E%3Cpath d='M0 0l800 600M800 0L0 600' stroke='%23ffffff' stroke-width='10' opacity='0.2'/%3E%3C/svg%3E");
+
+  /* Tùy chỉnh ảnh nền */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Trang trí khối div */
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Căn giữa nội dung văn bản bên trong khối */
+}
+
+.important-box h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.important-box p {
+  font-size: 15px;
+  line-height: 1.5;
+}
