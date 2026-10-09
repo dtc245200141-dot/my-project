@@ -1,0 +1,50 @@
+/* Reset box-sizing toàn trang */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Khung container tự động thu ôm các phần tử con bị float nhờ overflow: hidden */
+.container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+/* Cột bên trái */
+.left-column {
+  width: 50%;
+  float: left;
+  background-color: lightgray;
+  padding: 20px;
+}
+
+/* Cột bên phải */
+.right-column {
+  width: 50%;
+  float: right;
+  background-color: lightgreen;
+  padding: 20px;
+}
+
+/* Khối giới hạn kích thước với thanh cuộn tự động */
+.overflow-box {
+  width: 300px;
+  height: 100px;
+  background-color: lightcoral;
+  padding: 10px;
+  overflow: auto; /* Tự động xuất hiện thanh cuộn khi văn bản bị tràn */
+  border-radius: 4px;
+}

@@ -1,0 +1,40 @@
+Quản lý bố cục trang với overflow và float Mục tiêu: Luyện tập sử dụng float,
+clear, overflow để tạo bố cục trang web chứa nội dung dài và đảm bảo không bị
+tràn. Mô tả: Tạo một file mới có tên index.html. Tạo một file style.css để áp
+dụng CSS. Thêm vào trong thẻ
+<body>
+  : Một tiêu đề
+  <h1>
+    , nội dung: "Bố cục trang với float và overflow". Một khối nội dung chứa 2
+    cột (float để căn trái và phải). Một khối chứa nội dung dài, sử dụng
+    overflow để hiển thị thanh cuộn khi nội dung quá dài. Yêu cầu nộp bài: Đưa
+    mã nguồn lên GitHub. Dán link repository vào phần nộp bài dưới đây. Ví dụ
+    mong đợi (HTML + CSS) index.html
+
+    <!doctype html>
+    <html lang="vi">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Bố cục với Float và Overflow</title>
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <h1>Bố cục trang với float và overflow</h1>
+        <div class="container">
+          <div class="left-column">Nội dung bên trái</div>
+          <div class="right-column">Nội dung bên phải</div>
+        </div>
+        <div class="overflow-box">
+          Đây là nội dung rất dài mà chúng ta kiểm tra overflow. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit...
+        </div>
+      </body>
+    </html>
+    style.css * { box-sizing: border-box; } .container { width: 100%; overflow:
+    hidden; } .left-column { width: 50%; float: left; background-color:
+    lightgray; padding: 20px; } .right-column { width: 50%; float: right;
+    background-color: lightgreen; padding: 20px; } .overflow-box { width: 300px;
+    height: 100px; background-color: lightcoral; padding: 10px; overflow: auto;
+    }
+  </h1>
+</body>
