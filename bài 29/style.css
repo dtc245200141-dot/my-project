@@ -1,0 +1,101 @@
+/* Reset CSS cơ bản */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #333333;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #666666;
+  font-size: 14px;
+}
+
+/* Khung chứa Gallery dàn hàng bằng Flexbox */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px; /* Offset bù trừ padding của cột */
+}
+
+/* Kiểu dáng khối thẻ ảnh */
+.gallery-card {
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.desc {
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #555555;
+}
+
+/* ==========================================================
+   MEDIA QUERIES (XỬ LÝ RESPONSIVE THEO YÊU CẦU ĐỀ BÀI)
+   ========================================================== */
+
+/* 1. Màn hình lớn (> 700px): Hiển thị 4 ảnh / dòng (25% mỗi cột) */
+@media (min-width: 701px) {
+  .responsive-column {
+    padding: 8px;
+    width: 25%;
+  }
+}
+
+/* 2. Màn hình nhỏ hơn hoặc bằng 700px: Hiển thị 2 ảnh / dòng (50% mỗi cột) */
+@media (max-width: 700px) {
+  .responsive-column {
+    padding: 8px;
+    width: 50%;
+  }
+}
+
+/* 3. Màn hình nhỏ hơn hoặc bằng 500px: Hiển thị 1 ảnh / dòng (100% mỗi cột) */
+@media (max-width: 500px) {
+  .responsive-column {
+    padding: 8px 0;
+    width: 100%;
+  }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 15px;
+  color: #888888;
+  font-size: 13px;
+}
