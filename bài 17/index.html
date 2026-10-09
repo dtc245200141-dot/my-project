@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành Nhúng CSS vào HTML</title>
+
+    <!-- 3. External CSS: Liên kết tới tệp style.css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- 2. Internal CSS: Viết CSS trực tiếp trong thẻ <style> thuộc phần <head> -->
+    <style>
+      .internal-heading {
+        color: #8e44ad; /* Màu tím */
+      }
+      .internal-text {
+        color: #27ae60; /* Màu xanh lá */
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Thực Hành Các Cách Nhúng CSS</h1>
+    <hr />
+
+    <!-- Phần 1: Inline Style (Viết trực tiếp vào thuộc tính style của thẻ HTML) -->
+    <section>
+      <h2>Phần 1: Sử dụng Inline CSS</h2>
+      <h3 style="color: #e74c3c">Tiêu đề được đổi màu bằng Inline CSS (Đỏ)</h3>
+      <p style="color: #2980b9">
+        Đoạn văn này được thay đổi màu sắc trực tiếp bằng thuộc tính style trong
+        thẻ HTML (Xanh dương).
+      </p>
+    </section>
+
+    <hr />
+
+    <!-- Phần 2: Internal Style (Sử dụng thẻ <style> trong phần <head>) -->
+    <section>
+      <h2>Phần 2: Sử dụng Internal CSS</h2>
+      <h3 class="internal-heading">
+        Tiêu đề được đổi màu bằng Internal CSS (Tím)
+      </h3>
+      <p class="internal-text">
+        Đoạn văn này được định dạng từ thẻ style nằm trong phần head (Xanh lá).
+      </p>
+    </section>
+
+    <hr />
+
+    <!-- Phần 3: External Style (Liên kết tới tệp CSS riêng biệt) -->
+    <section>
+      <h2>Phần 3: Sử dụng External CSS</h2>
+      <h3 class="external-heading">
+        Tiêu đề được đổi màu bằng External CSS (Xanh đậm)
+      </h3>
+      <p class="external-text">
+        Đoạn văn này được định dạng thông qua liên kết tệp style.css bên ngoài
+        (Cam).
+      </p>
+    </section>
+  </body>
+</html>
