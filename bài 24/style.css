@@ -1,0 +1,64 @@
+/* Thiết lập chung toàn trang */
+* {
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng độ rộng */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Thanh điều hướng nav */
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #333333;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #e0e0e0;
+}
+
+/* Khu vực section chứa các hộp inline-block */
+section {
+  margin-top: 20px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Các khối cột dàn hàng ngang bằng inline-block */
+.box {
+  display: inline-block;
+  width: 28%; /* Đặt kích thước để 3 cột cùng nằm trên 1 hàng */
+  padding: 20px;
+  background-color: lightblue;
+  margin: 1%;
+  vertical-align: top;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  color: #666666;
+  font-size: 14px;
+}
