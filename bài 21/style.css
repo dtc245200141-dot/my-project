@@ -1,0 +1,37 @@
+/* Thiết lập cơ bản */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Khung chứa bao bọc toàn bộ bố cục */
+.container {
+  width: 100%;
+}
+
+/* Cột bên trái: Chiếm 60% chiều rộng */
+.left-column {
+  width: 60%;
+  float: left;
+  background-color: lightblue;
+  padding: 20px;
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng chiều rộng */
+}
+
+/* Cột bên phải: Chiếm 38% chiều rộng */
+.right-column {
+  width: 38%;
+  float: right;
+  background-color: lightgreen;
+  padding: 20px;
+  box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng chiều rộng */
+}
+
+/* Xử lý float (Clearfix) để chống vỡ khung container */
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
