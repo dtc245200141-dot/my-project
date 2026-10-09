@@ -1,0 +1,80 @@
+/* 1. Bộ chọn body cố định phông chữ cho cả trang */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 20px 0;
+  background-color: #f4f4f4;
+}
+
+/* Bộ chọn #main cố định độ rộng và căn chỉnh nằm giữa màn hình */
+#main {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+/* 2. Bộ chọn #head xác định chiều cao, màu nền, đường viền và margin-bottom */
+#head {
+  height: 100px;
+  background-color: #e0e0e0;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 5px;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* 4. Định nghĩa bộ chọn #head-link cho vùng liên kết đầu trang */
+#head-link {
+  height: 35px;
+  background-color: #d0d0d0;
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 5px;
+  line-height: 35px;
+  padding-left: 15px;
+  font-weight: bold;
+}
+
+/* 6. Định nghĩa bộ chọn #left: float dạt sang trái */
+#left {
+  width: 200px;
+  min-height: 400px;
+  float: left;
+  background-color: #e8e8e8;
+  border-right: 1px solid #cccccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* 8. Bổ sung selector cho vùng giữa #content và vùng phải #right */
+#content {
+  width: 550px;
+  min-height: 400px;
+  float: left;
+  background-color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#right {
+  width: 210px;
+  min-height: 400px;
+  float: right;
+  background-color: #e8e8e8;
+  border-left: 1px solid #cccccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* 10. Định nghĩa bộ chọn cho phân vùng cuối trang #footer */
+#footer {
+  clear: both; /* Xử lý float để nhảy xuống dưới 3 cột #left, #content, #right */
+  height: 50px;
+  background-color: #d0d0d0;
+  border-top: 1px solid #cccccc;
+  margin-top: 5px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+}
