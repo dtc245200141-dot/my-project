@@ -1,0 +1,72 @@
+/* Reset CSS cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Container chính bao bọc toàn trang xếp theo chiều dọc */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Sử dụng min-height để giao diện linh hoạt hơn vh cố định */
+}
+
+/* Định dạng Header và Footer */
+.header,
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* Định dạng thanh Navigation */
+.nav {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* Khung chứa ở giữa: chuyển thành Flex Container nằm ngang trên Desktop */
+.main-container {
+  display: flex;
+  flex: 1; /* Chiếm toàn bộ phần chiều cao còn trống ở giữa */
+}
+
+/* Phần nội dung chính chiếm 3 phần */
+.content {
+  flex: 3;
+  padding: 20px;
+  background-color: #ffffff;
+  font-size: 18px;
+}
+
+/* Phần Sidebar chiếm 1 phần */
+.sidebar {
+  flex: 1;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  font-weight: 500;
+}
+
+/* ------------------------------------------- */
+/* CẤU HÌNH RESPONSIVE CHO MOBILE (MÀN HÌNH DƯỚI 768PX) */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Chuyển trục chính thành chiều dọc trên Mobile */
+  }
+
+  .sidebar {
+    border-left: none;
+    border-top: 1px solid #ddd; /* Đổi đường vạch ngăn cách từ dọc thành ngang */
+  }
+}
