@@ -1,0 +1,83 @@
+/* Reset CSS cơ bản giúp hiển thị đồng bộ trên các trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+}
+
+/* ------------------------------------------- */
+/* CẤU HÌNH FLEXBOX CHO DESKTOP (MÀN HÌNH LỚN) */
+.container {
+  display: flex;
+  flex-direction: column; /* Các thành phần lớn xếp dọc từ trên xuống */
+  min-height: 100vh; /* Chiếm tối thiểu toàn bộ chiều cao màn hình */
+}
+
+/* Định dạng chung cho Header, Nav, Footer */
+.header,
+.nav,
+.footer {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.header {
+  background-color: #1e3a8a; /* Xanh dương đậm */
+  padding: 25px;
+  font-size: 24px;
+}
+
+.nav {
+  background-color: #0d9488; /* Xanh ngọc */
+  padding: 15px;
+  font-size: 16px;
+}
+
+/* Khung chứa ở giữa: Kích hoạt Flexbox nằm ngang trên Desktop */
+.main-container {
+  display: flex;
+  flex: 1; /* Tự động giãn rộng để chiếm toàn bộ phần chiều cao còn trống ở giữa */
+}
+
+/* Phần nội dung chính (Chiếm phần lớn chiều rộng) */
+.content {
+  flex: 3; /* Chiếm 3 phần không gian */
+  background-color: white;
+  padding: 30px;
+  font-size: 18px;
+  min-height: 300px;
+}
+
+/* Phần Sidebar (Chiếm phần nhỏ chiều rộng) */
+.sidebar {
+  flex: 1; /* Chiếm 1 phần không gian */
+  background-color: #f1f5f9; /* Xám nhạt */
+  padding: 20px;
+  border-left: 1px solid #cbd5e1;
+  font-weight: 500;
+}
+
+.footer {
+  background-color: #1e293b; /* Xám đen */
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ------------------------------------------- */
+/* CẤU HÌNH RESPONSIVE CHO MOBILE (MÀN HÌNH DƯỚI 768PX) */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column; /* Chuyển trục chính từ ngang thành dọc trên Mobile */
+  }
+
+  .sidebar {
+    border-left: none;
+    border-top: 1px solid #cbd5e1; /* Chuyển đường ngăn cách từ dọc thành ngang */
+  }
+}
