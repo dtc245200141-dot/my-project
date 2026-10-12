@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VietExplore - Khám phá Việt Nam</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- CSS tùy chỉnh -->
+    <style>
+      :root {
+        --main-color: #176b55;
+        --dark-color: #153d33;
+        --light-color: #f3f8f5;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        color: #26382f;
+      }
+
+      .navbar {
+        background-color: var(--dark-color);
+      }
+
+      .navbar-brand {
+        letter-spacing: 1px;
+      }
+
+      .hero-section {
+        background: linear-gradient(135deg, #f1f8f3, #e2f0e7);
+        padding: 72px 0;
+      }
+
+      .hero-title {
+        color: var(--dark-color);
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .text-green {
+        color: var(--main-color);
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+      }
+
+      .section-padding {
+        padding: 72px 0;
+      }
+
+      .intro-image {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }
+
+      .feature-card {
+        height: 100%;
+        padding: 28px 22px;
+        border: 1px solid #e6eee8;
+        border-radius: 16px;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .feature-icon {
+        width: 58px;
+        height: 58px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color: var(--main-color);
+        border-radius: 14px;
+        font-size: 26px;
+      }
+
+      .btn-green {
+        background-color: var(--main-color);
+        border-color: var(--main-color);
+        color: white;
+      }
+
+      .btn-green:hover {
+        background-color: var(--dark-color);
+        border-color: var(--dark-color);
+        color: white;
+      }
+
+      .cta-section {
+        background-color: var(--dark-color);
+        color: white;
+      }
+
+      footer {
+        background-color: #102e27;
+        color: #dce8e0;
+      }
+
+      @media (max-width: 767.98px) {
+        .hero-section {
+          padding: 48px 0;
+        }
+
+        .hero-title {
+          font-size: 2.2rem;
+        }
+
+        .hero-image {
+          height: 280px;
+        }
+
+        .section-padding {
+          padding: 48px 0;
+        }
+
+        .intro-image {
+          height: 280px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="#home">
+          <i class="bi bi-compass me-2"></i>VietExplore
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainMenu"
+          aria-controls="mainMenu"
+          aria-expanded="false"
+          aria-label="Mở menu điều hướng"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home"> Trang chủ </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#gioi-thieu"> Giới thiệu </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#diem-den"> Điểm nổi bật </a>
+            </li>
+
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn btn-light fw-semibold" href="#lien-he">
+                Khám phá ngay
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BANNER / HERO -->
+    <header class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Tiêu đề và nội dung -->
+          <div class="col-12 col-lg-6">
+            <span class="badge rounded-pill text-bg-success mb-3">
+              HÀNH TRÌNH VIỆT NAM
+            </span>
+
+            <h1 class="display-4 hero-title mb-4">
+              Chạm vào vẻ đẹp
+              <span class="text-green">Việt Nam</span>
+            </h1>
+
+            <p class="lead text-secondary mb-4">
+              Khám phá những miền đất tuyệt đẹp, hòa mình vào thiên nhiên và
+              trải nghiệm nét văn hóa độc đáo trên khắp mọi miền đất nước.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#diem-den" class="btn btn-green btn-lg">
+                Khám phá ngay
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+
+              <a href="#gioi-thieu" class="btn btn-outline-success btn-lg">
+                Tìm hiểu thêm
+              </a>
+            </div>
+
+            <p class="text-muted small mt-4 mb-0">
+              <i class="bi bi-geo-alt-fill me-1"></i>
+              Từ núi rừng đến biển đảo Việt Nam
+            </p>
+          </div>
+
+          <!-- Hình ảnh nổi bật -->
+          <div class="col-12 col-lg-6">
+            <img
+              src="https://cdn.inspiringvacations.com/eyJrZXkiOiI2MWEwYzc2Mi1jNDg5LTQwMjktOWVjZi01OWY3ZDhmMjc4ODIucG5nIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4MDAsImhlaWdodCI6NDQwLCJmaXQiOiJjb3ZlciJ9fX0%3D"
+              class="img-fluid rounded-4 shadow-lg hero-image"
+              alt="Cảnh núi đá và dòng sông giữa ruộng lúa Việt Nam"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- GIỚI THIỆU -->
+    <section class="section-padding" id="gioi-thieu">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Hình ảnh giới thiệu -->
+          <div class="col-12 col-lg-6">
+            <img
+              src="https://static-cms.routard.com/web-routard/uploads/ninh-b-nh-tam-c-c.1618963_4e27752887.jpg"
+              class="img-fluid rounded-4 shadow intro-image"
+              alt="Dòng sông uốn lượn qua cánh đồng và núi đá ở Ninh Bình"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Nội dung giới thiệu -->
+          <div class="col-12 col-lg-6">
+            <p class="text-green fw-bold text-uppercase">Về VietExplore</p>
+
+            <h2 class="display-6 fw-bold mb-4">
+              Mỗi chuyến đi là một câu chuyện đáng nhớ
+            </h2>
+
+            <p class="text-secondary">
+              Việt Nam sở hữu cảnh quan thiên nhiên đa dạng, từ núi non hùng vĩ
+              đến những bãi biển thơ mộng. Mỗi vùng miền còn mang đến những món
+              ăn và nét văn hóa đặc trưng riêng.
+            </p>
+
+            <p class="text-secondary">
+              VietExplore giúp bạn tìm cảm hứng cho chuyến đi tiếp theo và khám
+              phá những trải nghiệm mới theo cách riêng của mình.
+            </p>
+
+            <a href="#diem-den" class="btn btn-green mt-2">
+              Xem điểm nổi bật
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DANH SÁCH TÍNH NĂNG -->
+    <section class="section-padding bg-light" id="diem-den">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="text-green fw-bold text-uppercase">Trải nghiệm nổi bật</p>
+
+          <h2 class="display-6 fw-bold">Điều gì đang chờ bạn?</h2>
+
+          <p class="text-secondary">
+            Những trải nghiệm giúp hành trình thêm trọn vẹn.
+          </p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+          <!-- Tính năng 1 -->
+          <div class="col">
+            <div class="feature-card bg-white">
+              <div class="feature-icon mb-3">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+
+              <h3 class="h5 fw-bold">Điểm đến hấp dẫn</h3>
+
+              <p class="text-secondary mb-0">
+                Khám phá những địa danh nổi tiếng và cảnh đẹp đặc sắc của Việt
+                Nam.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tính năng 2 -->
+          <div class="col">
+            <div class="feature-card bg-white">
+              <div class="feature-icon mb-3">
+                <i class="bi bi-map"></i>
+              </div>
+
+              <h3 class="h5 fw-bold">Lên kế hoạch</h3>
+
+              <p class="text-secondary mb-0">
+                Sắp xếp hành trình phù hợp với sở thích và thời gian của bạn.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tính năng 3 -->
+          <div class="col">
+            <div class="feature-card bg-white">
+              <div class="feature-icon mb-3">
+                <i class="bi bi-cup-hot"></i>
+              </div>
+
+              <h3 class="h5 fw-bold">Văn hóa ẩm thực</h3>
+
+              <p class="text-secondary mb-0">
+                Thưởng thức món ngon địa phương và tìm hiểu văn hóa vùng miền.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tính năng 4 -->
+          <div class="col">
+            <div class="feature-card bg-white">
+              <div class="feature-icon mb-3">
+                <i class="bi bi-camera"></i>
+              </div>
+
+              <h3 class="h5 fw-bold">Lưu giữ kỷ niệm</h3>
+
+              <p class="text-secondary mb-0">
+                Ghi lại những khoảnh khắc đẹp trong từng chuyến đi đáng nhớ.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section-padding" id="lien-he">
+      <div class="container text-center">
+        <h2 class="display-6 fw-bold mb-3">Sẵn sàng cho hành trình mới?</h2>
+
+        <p class="lead mb-4">
+          Bắt đầu khám phá những điều tuyệt vời của Việt Nam.
+        </p>
+
+        <a href="#gioi-thieu" class="btn btn-light btn-lg fw-semibold">
+          Bắt đầu khám phá
+          <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4">
+      <div class="container text-center">
+        <p class="fw-bold mb-1">
+          <i class="bi bi-compass me-2"></i>VietExplore
+        </p>
+
+        <p class="small mb-0">
+          © 2026 VietExplore. Bài tập thực hành Bootstrap.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
