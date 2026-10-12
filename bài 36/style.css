@@ -1,0 +1,41 @@
+/* Reset CSS cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  background-color: #f4f6f9;
+}
+
+/* Định dạng Flex Container */
+.container {
+  display: flex;
+  background-color: #ffffff;
+  padding: 15px;
+  border: 2px dashed #999;
+  border-radius: 6px;
+  gap: 10px;
+  width: 100%; /* Giãn hết chiều ngang màn hình để thấy rõ flex-grow */
+}
+
+/* Định dạng chung cho các ô Flex Items */
+.item {
+  background-color: lightblue;
+  padding: 25px 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  color: #333;
+  min-width: 100px; /* Chiều rộng cơ sở tối thiểu cho mỗi ô */
+}
+
+/* --- ĐẶC BIỆT: Áp dụng thuộc tính flex-grow lên Ô thứ 2 --- */
+.item2 {
+  flex-grow: 1; /* Chiếm toàn bộ không gian trống còn lại của container */
+  background-color: #ff9800; /* Đổi sang màu cam để làm nổi bật */
+  color: white;
+}
