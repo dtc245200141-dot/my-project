@@ -1,0 +1,162 @@
+/* HEADER */
+header {
+  position: relative;
+}
+
+.mall-header {
+  height: 200px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #204a70, #5fa0c9);
+  border-radius: 0 0 5px 5px;
+}
+
+.header-object {
+  width: 260px;
+  height: 160px;
+  margin: 20px 20px 0 0;
+  object-fit: cover;
+}
+
+.shopping-mall {
+  position: absolute;
+  left: 25px;
+  bottom: 20px;
+  z-index: 2;
+  font-variant: small-caps;
+}
+
+.shopping-mall > h1 {
+  font-family: Impact, sans-serif;
+  font-size: 42px;
+  color: white;
+  letter-spacing: 0.3px;
+  text-shadow: 0 0 3px black;
+  padding-bottom: 8px;
+  border-bottom: 1px dotted #ddd;
+  margin: 0;
+}
+
+.shopping-mall > h5 {
+  margin-top: 8px;
+  color: white;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 2px black;
+}
+
+/* NAVBAR */
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-inverse .navbar-brand {
+  font-weight: bold;
+}
+
+/* GIO HANG */
+.poly-cart {
+  margin-top: 0;
+}
+
+.poly-cart ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-variant: small-caps;
+}
+
+.poly-cart .panel-heading strong {
+  font-variant: small-caps;
+  font-size: larger;
+  text-shadow: 0 0 2px darkgray;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75px;
+}
+
+.cart-icon .glyphicon {
+  font-size: 48px;
+  color: #337ab7;
+}
+
+/* SAN PHAM */
+.poly-prod {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.poly-prod .panel-heading {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poly-prod .panel-body {
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.poly-prod .panel-body img {
+  width: 95%;
+  height: 150px;
+  object-fit: contain;
+}
+
+.poly-prod .panel-footer {
+  color: #c9302c;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 20px;
+}
+
+footer .panel-heading {
+  padding: 15px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* RESPONSIVE CHO DIEN THOAI */
+@media (max-width: 767px) {
+  .mall-header {
+    height: 175px;
+  }
+
+  .header-object {
+    width: 130px;
+    height: 90px;
+    margin: 15px 10px 0 0;
+    opacity: 0.75;
+  }
+
+  .shopping-mall {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .shopping-mall > h1 {
+    font-size: 27px;
+  }
+
+  .shopping-mall > h5 {
+    max-width: 280px;
+    font-size: 12px;
+  }
+
+  .poly-prod .panel-body {
+    min-height: 160px;
+  }
+}

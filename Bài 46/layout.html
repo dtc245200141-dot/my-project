@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Online Shopping Mall</title>
+
+    <!-- Bootstrap 3.3.7 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+
+    <!-- CSS tùy chỉnh -->
+    <link rel="stylesheet" href="poly.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header class="row mall-header">
+        <div class="shopping-mall">
+          <h1>Online shopping mall</h1>
+          <h5>The center point of professional programming</h5>
+        </div>
+
+        <img
+          class="pull-right header-object"
+          src="https://placehold.co/260x160/337ab7/ffffff?text=Shopping+Mall"
+          alt="Hình ảnh cửa hàng trực tuyến"
+        />
+      </header>
+
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#main-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Mở menu</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">
+              <span class="glyphicon glyphicon-shopping-cart"></span>
+              Online Mall
+            </a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="main-menu">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#home">
+                  <span class="glyphicon glyphicon-home"></span>
+                  Trang chủ
+                </a>
+              </li>
+
+              <li>
+                <a href="#gioi-thieu">
+                  <span class="glyphicon glyphicon-list-alt"></span>
+                  Giới thiệu
+                </a>
+              </li>
+
+              <li>
+                <a href="#lien-he">
+                  <span class="glyphicon glyphicon-earphone"></span>
+                  Liên hệ
+                </a>
+              </li>
+
+              <li>
+                <a href="#gop-y">
+                  <span class="glyphicon glyphicon-envelope"></span>
+                  Góp ý
+                </a>
+              </li>
+
+              <li>
+                <a href="#hoi-dap">
+                  <span class="glyphicon glyphicon-question-sign"></span>
+                  Hỏi đáp
+                </a>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a
+                  href="#"
+                  class="dropdown-toggle"
+                  data-toggle="dropdown"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="glyphicon glyphicon-user"></span>
+                  Tài khoản
+                  <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#">Đăng nhập</a></li>
+                  <li><a href="#">Đăng ký</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Quên mật khẩu</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- MAIN LAYOUT -->
+      <div class="row" id="home">
+        <!-- ARTICLE: DANH SÁCH SẢN PHẨM -->
+        <article class="col-sm-9">
+          <div class="page-header">
+            <h2>Sản phẩm nổi bật</h2>
+            <p>Khám phá các sản phẩm tại cửa hàng của chúng tôi.</p>
+          </div>
+
+          <div class="row">
+            <!-- SẢN PHẨM 1 -->
+            <div class="col-sm-4">
+              <div class="panel panel-default poly-prod">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Nokia</h4>
+                </div>
+
+                <div class="panel-body">
+                  <img
+                    class="img-responsive center-block"
+                    src="https://placehold.co/300x180/f5f5f5/333333?text=Nokia"
+                    alt="Điện thoại Nokia"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="panel-footer">$100.25</div>
+              </div>
+            </div>
+
+            <!-- SẢN PHẨM 2 -->
+            <div class="col-sm-4">
+              <div class="panel panel-default poly-prod">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Samsung</h4>
+                </div>
+
+                <div class="panel-body">
+                  <img
+                    class="img-responsive center-block"
+                    src="https://placehold.co/300x180/f5f5f5/333333?text=Samsung"
+                    alt="Điện thoại Samsung"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="panel-footer">$150.50</div>
+              </div>
+            </div>
+
+            <!-- SẢN PHẨM 3 -->
+            <div class="col-sm-4">
+              <div class="panel panel-default poly-prod">
+                <div class="panel-heading">
+                  <h4 class="panel-title">iPhone</h4>
+                </div>
+
+                <div class="panel-body">
+                  <img
+                    class="img-responsive center-block"
+                    src="https://placehold.co/300x180/f5f5f5/333333?text=iPhone"
+                    alt="Điện thoại iPhone"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="panel-footer">$250.75</div>
+              </div>
+            </div>
+
+            <!-- SẢN PHẨM 4 -->
+            <div class="col-sm-4">
+              <div class="panel panel-default poly-prod">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Laptop Dell</h4>
+                </div>
+
+                <div class="panel-body">
+                  <img
+                    class="img-responsive center-block"
+                    src="https://placehold.co/300x180/f5f5f5/333333?text=Laptop+Dell"
+                    alt="Máy tính xách tay Dell"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="panel-footer">$550.00</div>
+              </div>
+            </div>
+
+            <!-- SẢN PHẨM 5 -->
+            <div class="col-sm-4">
+              <div class="panel panel-default poly-prod">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Máy tính để bàn</h4>
+                </div>
+
+                <div class="panel-body">
+                  <img
+                    class="img-responsive center-block"
+                    src="https://placehold.co/300x180/f5f5f5/333333?text=Desktop+PC"
+                    alt="Máy tính để bàn"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="panel-footer">$700.00</div>
+              </div>
+            </div>
+
+            <!-- SẢN PHẨM 6 -->
+            <div class="col-sm-4">
+              <div class="panel panel-default poly-prod">
+                <div class="panel-heading">
+                  <h4 class="panel-title">Smart TV</h4>
+                </div>
+
+                <div class="panel-body">
+                  <img
+                    class="img-responsive center-block"
+                    src="https://placehold.co/300x180/f5f5f5/333333?text=Smart+TV"
+                    alt="Tivi thông minh"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="panel-footer">$400.00</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ASIDE: GIỎ HÀNG, TÌM KIẾM, DANH MỤC -->
+        <aside class="col-sm-3">
+          <!-- GIỎ HÀNG -->
+          <div class="poly-cart panel panel-default">
+            <div class="panel-heading">
+              <strong>
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                Giỏ hàng
+              </strong>
+            </div>
+
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-5 cart-icon">
+                  <span class="glyphicon glyphicon-shopping-cart"></span>
+                </div>
+
+                <div class="col-xs-7">
+                  <ul>
+                    <li>100 items</li>
+                    <li>$56.8</li>
+                    <li><a href="#">Xem giỏ hàng</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ô TÌM KIẾM -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <strong>
+                <span class="glyphicon glyphicon-search"></span>
+                Tìm kiếm
+              </strong>
+            </div>
+
+            <div class="panel-body">
+              <form action="#" method="get">
+                <input
+                  type="search"
+                  name="keyword"
+                  class="form-control"
+                  placeholder="Keywords"
+                  aria-label="Từ khóa tìm kiếm"
+                />
+              </form>
+            </div>
+          </div>
+
+          <!-- DANH MỤC SẢN PHẨM -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <span class="glyphicon glyphicon-th-list"></span>
+              <strong>Chủng loại</strong>
+            </div>
+
+            <div class="list-group">
+              <a href="#" class="list-group-item"> Điện thoại di động </a>
+
+              <a href="#" class="list-group-item"> Máy tính xách tay </a>
+
+              <a href="#" class="list-group-item"> Máy tính để bàn </a>
+
+              <a href="#" class="list-group-item"> Quạt máy </a>
+
+              <a href="#" class="list-group-item"> Tivi </a>
+
+              <a href="#" class="list-group-item"> Tủ lạnh </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="panel panel-default" id="lien-he">
+        <div class="panel-heading text-center">
+          <p>Online Shopping Mall &copy; 2026</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- jQuery: phải tải trước Bootstrap JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap 3.3.7 JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
