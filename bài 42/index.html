@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới Thiệu Công Ty</title>
+    <!-- Bước 1: Nhúng CSS Bootstrap từ CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      /* Cuộn trang mượt mà khi bấm vào các liên kết anchor link trên Navbar */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Bước 2.2: Thành phần Thanh điều hướng (Navbar) -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">Doanh Nghiệp</a>
+        <!-- Nút đóng/mở menu trên giao diện điện thoại di động -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- ms-auto giúp đẩy các mục menu điều hướng về phía bên phải màn hình -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Trang Chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Về Chúng Tôi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Dịch Vụ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Liên Hệ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Bước 2.3: Thành phần Banner chính mở đầu (Hero Section) -->
+    <header class="bg-primary text-white text-center py-5">
+      <div class="container py-4">
+        <h1 class="display-4 fw-bold mb-3">
+          Chào mừng đến với Công Ty Chúng Tôi
+        </h1>
+        <p class="lead mb-4">
+          Chúng tôi cung cấp các giải pháp chuyên nghiệp và tối ưu nhất cho
+          doanh nghiệp của bạn
+        </p>
+        <a
+          href="#services"
+          class="btn btn-light btn-lg fw-semibold px-4 shadow-sm"
+          >Tìm Hiểu Ngay</a
+        >
+      </div>
+    </header>
+
+    <!-- Bước 2.4: Thành phần Giới thiệu (About Section) -->
+    <section id="about" class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-bold mb-4 position-relative d-inline-block">
+            Về Chúng Tôi
+          </h2>
+          <p class="lead text-muted">
+            Công ty chúng tôi chuyên cung cấp các dịch vụ công nghệ cao, thiết
+            kế website chuyên nghiệp và các chiến dịch tiếp thị kỹ thuật số
+            (Digital Marketing) bùng nổ doanh số.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="container my-2 text-muted opacity-25" />
+
+    <!-- Bước 2.5: Thành phần Khối các Dịch vụ (Services Section với Grid & Cards) -->
+    <section id="services" class="container py-5">
+      <h2 class="text-center fw-bold mb-5">Dịch vụ của chúng tôi</h2>
+      <div class="row g-4">
+        <!-- Dịch vụ 1 -->
+        <div class="col-md-4 text-center">
+          <div class="card h-100 p-3 border-0 shadow-sm bg-light">
+            <div class="card-body">
+              <h3 class="h5 fw-bold text-primary mb-3">Thiết kế Website</h3>
+              <p class="card-text text-muted">
+                Thiết kế giao diện chuyên nghiệp, chuẩn SEO, responsive và tối
+                ưu hóa trải nghiệm người dùng tuyệt đối trên mọi thiết bị.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Dịch vụ 2 -->
+        <div class="col-md-4 text-center">
+          <div class="card h-100 p-3 border-0 shadow-sm bg-light">
+            <div class="card-body">
+              <h3 class="h5 fw-bold text-primary mb-3">Marketing Online</h3>
+              <p class="card-text text-muted">
+                Giải pháp tiếp thị số đa kênh toàn diện giúp thương hiệu và sản
+                phẩm của doanh nghiệp bạn tiếp cận hàng triệu khách hàng tiềm
+                năng.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Dịch vụ 3 -->
+        <div class="col-md-4 text-center">
+          <div class="card h-100 p-3 border-0 shadow-sm bg-light">
+            <div class="card-body">
+              <h3 class="h5 fw-bold text-primary mb-3">Hỗ trợ khách hàng</h3>
+              <p class="card-text text-muted">
+                Chúng tôi cam kết đồng hành và hỗ trợ kỹ thuật, tư vấn vận hành
+                hệ thống cho quý khách hàng liên tục 24/7 bất kể khi nào bạn
+                cần.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bước 2.6: Thành phần Thông tin liên hệ (Contact Section) -->
+    <section id="contact" class="bg-light py-5 mt-auto border-top">
+      <div class="container text-center py-3">
+        <h2 class="fw-bold mb-4">Liên hệ với chúng tôi</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <p class="mb-1 text-muted fw-semibold">📩 Email doanh nghiệp</p>
+            <a
+              href="mailto:contact@company.com"
+              class="text-decoration-none fw-bold"
+              >contact@company.com</a
+            >
+          </div>
+          <div class="col-md-4 mb-3">
+            <p class="mb-1 text-muted fw-semibold">
+              📞 Đường dây nóng (Hotline)
+            </p>
+            <a
+              href="tel:0988123456"
+              class="text-decoration-none fw-bold text-success"
+              >0988 123 456</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bước 2.7: Thành phần Chân trang (Footer) -->
+    <footer class="bg-dark text-white-50 text-center py-3">
+      <div class="container">
+        <p class="mb-0">
+          &copy; 2026 Công Ty Chúng Tôi. All rights reserved. Powered by
+          Bootstrap.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bước 1: Nhúng JavaScript Bootstrap để kích hoạt tính năng tương tác đóng mở Menu trên Mobile -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
