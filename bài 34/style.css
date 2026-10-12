@@ -1,0 +1,60 @@
+/* Thiết lập khung chứa Flex Container */
+.container {
+  display: flex;
+  width: 600px;
+  height: 300px;
+  gap: 10px;
+  border: 3px solid black;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Định dạng các ô Flex Items bên trong */
+.item {
+  width: 180px;
+  height: 80px;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+/* --- THAY ĐỔI CÁC TRƯỜNG HỢP Ở ĐÂY ĐỂ KIỂM TRA --- */
+
+/* Trường hợp 1: wrap (Cho phép xuống dòng thông thường) */
+.container {
+  flex-wrap: wrap;
+}
+.item {
+  background-color: lightblue;
+}
+
+/* Trường hợp 2: nowrap (Ép các ô trên một dòng, ô sẽ tự co lại) */
+/* 
+.container {
+    flex-wrap: nowrap; 
+}
+.item { background-color: lightgreen; } 
+*/
+
+/* Trường hợp 3: wrap-reverse (Cho phép xuống dòng nhưng đảo ngược trục dọc) */
+/* 
+.container {
+    flex-wrap: wrap-reverse; 
+}
+.item { background-color: lightcoral; } 
+*/
+
+/* Trường hợp 4: initial (Đưa về giá trị mặc định - tương đương nowrap) */
+/* 
+.container {
+    flex-wrap: initial; 
+}
+.item { background-color: lightyellow; } 
+*/
