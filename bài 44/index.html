@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Đăng ký tài khoản</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #eaf3ff, #f8fbff);
+        min-height: 100vh;
+        color: #17365d;
+      }
+
+      .navbar {
+        background-color: #173b70;
+      }
+
+      .register-card {
+        max-width: 720px;
+        margin: 40px auto;
+        padding: 32px;
+        background-color: white;
+        border-radius: 16px;
+        box-shadow: 0 8px 28px rgba(23, 59, 112, 0.12);
+      }
+
+      .form-label {
+        font-weight: 600;
+      }
+
+      .form-control,
+      .form-select {
+        padding: 11px 14px;
+        border-radius: 8px;
+      }
+
+      .btn-primary {
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+
+      .required {
+        color: #dc3545;
+      }
+
+      @media (max-width: 576px) {
+        .register-card {
+          margin: 20px 12px;
+          padding: 22px 18px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#"> EduConnect </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Mở menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#register"> Đăng ký </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#login"> Đăng nhập </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#footer"> Giới thiệu </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- REGISTRATION FORM -->
+    <main class="container" id="register">
+      <div class="register-card">
+        <div class="text-center mb-4">
+          <div class="mb-2">
+            <span class="badge rounded-pill text-bg-primary fs-6 p-3">
+              USER
+            </span>
+          </div>
+
+          <h1 class="h2 fw-bold">Đăng ký tài khoản</h1>
+
+          <p class="text-muted">
+            Tạo tài khoản để tham gia cộng đồng của chúng tôi.
+          </p>
+        </div>
+
+        <form id="registrationForm">
+          <!-- Họ và tên -->
+          <div class="mb-3">
+            <label for="fullName" class="form-label">
+              Họ và tên <span class="required">*</span>
+            </label>
+
+            <input
+              type="text"
+              class="form-control"
+              id="fullName"
+              name="fullName"
+              placeholder="Nhập họ và tên của bạn"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">
+              Email <span class="required">*</span>
+            </label>
+
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <!-- Mật khẩu và xác nhận -->
+          <div class="row">
+            <div class="col-12 col-md-6 mb-3">
+              <label for="password" class="form-label">
+                Mật khẩu <span class="required">*</span>
+              </label>
+
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Ít nhất 8 ký tự"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              />
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+              <label for="confirmPassword" class="form-label">
+                Xác nhận mật khẩu
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Nhập lại mật khẩu"
+                autocomplete="new-password"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-text mb-3">Mật khẩu cần có ít nhất 8 ký tự.</div>
+
+          <!-- Giới tính -->
+          <fieldset class="mb-4">
+            <legend class="form-label fs-6">
+              Giới tính <span class="required">*</span>
+            </legend>
+
+            <div class="d-flex flex-wrap gap-4">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="male"
+                  value="Nam"
+                  required
+                />
+
+                <label class="form-check-label" for="male"> Nam </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="female"
+                  value="Nữ"
+                />
+
+                <label class="form-check-label" for="female"> Nữ </label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gender"
+                  id="other"
+                  value="Khác"
+                />
+
+                <label class="form-check-label" for="other"> Khác </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Sở thích -->
+          <fieldset class="mb-4">
+            <legend class="form-label fs-6">Sở thích</legend>
+
+            <div class="row g-2">
+              <div class="col-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="interests"
+                    id="reading"
+                    value="Đọc sách"
+                  />
+
+                  <label class="form-check-label" for="reading">
+                    Đọc sách
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="interests"
+                    id="travel"
+                    value="Du lịch"
+                  />
+
+                  <label class="form-check-label" for="travel"> Du lịch </label>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="interests"
+                    id="music"
+                    value="Âm nhạc"
+                  />
+
+                  <label class="form-check-label" for="music"> Âm nhạc </label>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="interests"
+                    id="sports"
+                    value="Thể thao"
+                  />
+
+                  <label class="form-check-label" for="sports">
+                    Thể thao
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-6 col-md-4">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="interests"
+                    id="movies"
+                    value="Phim ảnh"
+                  />
+
+                  <label class="form-check-label" for="movies">
+                    Phim ảnh
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Quốc gia -->
+          <div class="mb-4">
+            <label for="country" class="form-label">
+              Quốc gia <span class="required">*</span>
+            </label>
+
+            <select class="form-select" id="country" name="country" required>
+              <option value="" selected disabled>-- Chọn quốc gia --</option>
+
+              <option value="VN">Việt Nam</option>
+              <option value="US">Hoa Kỳ</option>
+              <option value="JP">Nhật Bản</option>
+              <option value="KR">Hàn Quốc</option>
+              <option value="SG">Singapore</option>
+              <option value="TH">Thái Lan</option>
+            </select>
+          </div>
+
+          <!-- Thông báo kết quả -->
+          <div
+            id="formMessage"
+            class="alert d-none"
+            role="status"
+            aria-live="polite"
+          ></div>
+
+          <!-- Nút Submit -->
+          <button type="submit" class="btn btn-primary w-100">
+            Đăng ký tài khoản
+          </button>
+
+          <p class="text-center text-muted small mt-4 mb-0" id="login">
+            Đã có tài khoản?
+            <a href="#login" class="link-primary text-decoration-none">
+              Đăng nhập
+            </a>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-muted py-3" id="footer">
+      <small> © 2026 EduConnect. Bài tập thực hành Bootstrap Forms. </small>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Kiểm tra dữ liệu form -->
+    <script>
+      const form = document.getElementById("registrationForm");
+      const password = document.getElementById("password");
+      const confirmPassword = document.getElementById("confirmPassword");
+      const formMessage = document.getElementById("formMessage");
+
+      function checkPassword() {
+        if (
+          confirmPassword.value !== "" &&
+          password.value !== confirmPassword.value
+        ) {
+          confirmPassword.setCustomValidity("Mật khẩu xác nhận không khớp.");
+        } else {
+          confirmPassword.setCustomValidity("");
+        }
+      }
+
+      password.addEventListener("input", checkPassword);
+      confirmPassword.addEventListener("input", checkPassword);
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        checkPassword();
+
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+
+        formMessage.className = "alert alert-success";
+        formMessage.textContent =
+          "Thông tin hợp lệ! Đây là bản demo, chưa lưu tài khoản vào máy chủ.";
+
+        formMessage.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        });
+      });
+    </script>
+  </body>
+</html>
