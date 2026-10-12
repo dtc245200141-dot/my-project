@@ -1,0 +1,102 @@
+/* Reset CSS cơ bản giúp hiển thị đồng bộ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* ------------------------------------------- */
+/* CẤU HÌNH GRID CHO DESKTOP (MÀN HÌNH LỚN) */
+.grid-container {
+  display: grid;
+  /* Chia lưới thành 4 cột bằng nhau và chiều cao tự động theo nội dung */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto 1fr auto;
+  /* Định vị các vùng không gian trong Grid */
+  grid-template-areas:
+    "header header header header"
+    "nav    nav    nav    nav"
+    "main   main   main   sidebar"
+    "footer footer footer footer";
+  gap: 15px;
+  padding: 15px;
+  min-height: 100vh;
+}
+
+/* Định dạng màu sắc và kiểu dáng cho từng vùng */
+.header {
+  grid-area: header;
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: #10b981;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.main {
+  grid-area: main;
+  background-color: white;
+  padding: 30px;
+  min-height: 300px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-left: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* ------------------------------------------- */
+/* CẤU HÌNH RESPONSIVE CHO MOBILE (MÀN HÌNH DƯỚI 768PX) */
+@media (max-width: 768px) {
+  .grid-container {
+    /* Chuyển toàn bộ lưới thành 1 cột dọc duy nhất */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    /* Sắp xếp lại thứ tự hiển thị từ trên xuống dưới */
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "sidebar"
+      "footer";
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .sidebar {
+    border-left: none;
+    border-top: 2px solid #e5e7eb; /* Chuyển đường vạch ngăn cách lên phía trên */
+  }
+}
