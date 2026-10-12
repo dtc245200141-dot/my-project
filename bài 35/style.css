@@ -1,0 +1,82 @@
+/* Thiết lập định dạng cơ bản cho toàn trang */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f6f9;
+}
+
+h3 {
+  margin-top: 30px;
+  color: #333;
+}
+
+/* Style mặc định cho Flex Container */
+.container {
+  display: flex;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Style mặc định cho các ô Flex Items */
+.item {
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------- */
+/* Cấu hình Ví dụ 1: Đơn vị px (Trục chính nằm ngang) */
+.ex-px .item {
+  background-color: lightblue;
+}
+.ex-px .item1 {
+  flex-basis: 200px;
+}
+.ex-px .item2 {
+  flex-basis: 100px;
+}
+.ex-px .item3 {
+  flex-basis: 150px;
+}
+
+/* ------------------------------------------- */
+/* Cấu hình Ví dụ 2: Trục chính thẳng đứng (Column) */
+.ex-column {
+  flex-direction: column;
+  height: 450px; /* Đặt chiều cao container để chứa phần tử */
+}
+.ex-column .item-col {
+  background-color: lightgreen;
+  flex-basis: 100px; /* flex-basis lúc này tác động vào CHIỀU CAO */
+}
+
+/* ------------------------------------------- */
+/* Cấu hình Ví dụ 3: Đơn vị phần trăm (%) */
+.ex-percent .item-50 {
+  background-color: lightcoral;
+  flex-basis: 50%; /* Mỗi ô chiếm một nửa độ rộng trục chính */
+}
+
+/* ------------------------------------------- */
+/* Cấu hình Ví dụ 4: Kết hợp flex-basis và flex-grow */
+.ex-grow {
+  width: 600px; /* Cố định chiều rộng container để thấy sự phân phối không gian trống */
+}
+.ex-grow .item {
+  background-color: #ba68c8;
+  color: white;
+  flex-basis: 100px; /* Kích thước nền móng ban đầu là 100px */
+}
+.ex-grow .grow-1 {
+  flex-grow: 1;
+}
+.ex-grow .grow-2 {
+  flex-grow: 2;
+} /* Item 2 nhận gấp đôi phần không gian dư thừa */
