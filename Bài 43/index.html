@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bài tập Bootstrap Grid System</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS tùy chỉnh -->
+    <style>
+      body {
+        background-color: #f4f7fb;
+        color: #243047;
+      }
+
+      .site-header {
+        background: linear-gradient(135deg, #173b72, #2878bd);
+        color: white;
+      }
+
+      .content-card {
+        height: 100%;
+        border: none;
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      }
+
+      .sidebar-box {
+        background-color: white;
+        border-radius: 14px;
+        padding: 24px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      }
+
+      .section-label {
+        color: #2878bd;
+        font-weight: 700;
+      }
+
+      .site-footer {
+        background-color: #172b4d;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header py-5">
+      <div class="container">
+        <p class="text-uppercase fw-semibold mb-2">Bài tập thực hành Web</p>
+
+        <h1 class="display-5 fw-bold">Thiết kế giao diện Responsive</h1>
+
+        <p class="lead mb-0">
+          Làm quen với Bootstrap Containers và Grid System.
+        </p>
+      </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home"> Bootstrap Demo </a>
+
+        <!-- Nút menu trên màn hình nhỏ -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Mở menu điều hướng"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home"> Trang chủ </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#content"> Nội dung </a>
+            </li>
+
+            <!-- Menu dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="resourceDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Tài nguyên
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="resourceDropdown">
+                <li>
+                  <a class="dropdown-item" href="#grid"> Grid System </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#sidebar"> Sidebar </a>
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#footer"> Thông tin trang </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#footer"> Liên hệ </a>
+            </li>
+          </ul>
+
+          <span class="navbar-text"> Bài tập Bootstrap 5 </span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main id="home" class="container my-5">
+      <div class="row g-4">
+        <!-- CỘT NỘI DUNG CHÍNH -->
+        <section class="col-12 col-lg-8" id="content">
+          <div class="mb-4">
+            <p class="section-label mb-2">MAIN CONTENT</p>
+
+            <h2 class="fw-bold">Khám phá Bootstrap Grid System</h2>
+
+            <p class="text-secondary">
+              Bootstrap giúp xây dựng bố cục trang web linh hoạt, dễ sử dụng và
+              phù hợp với nhiều loại màn hình.
+            </p>
+          </div>
+
+          <div class="row g-3" id="grid">
+            <div class="col-12 col-md-6">
+              <article class="card content-card">
+                <div class="card-body p-4">
+                  <h3 class="h5 fw-bold">01. Container</h3>
+
+                  <p class="text-secondary mb-0">
+                    Container giúp căn chỉnh và giới hạn chiều rộng nội dung
+                    trang web.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="card content-card">
+                <div class="card-body p-4">
+                  <h3 class="h5 fw-bold">02. Row và Column</h3>
+
+                  <p class="text-secondary mb-0">
+                    Row và Column giúp sắp xếp nội dung thành các hàng và cột
+                    linh hoạt.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="card content-card">
+                <div class="card-body p-4">
+                  <h3 class="h5 fw-bold">03. Responsive</h3>
+
+                  <p class="text-secondary mb-0">
+                    Giao diện tự điều chỉnh theo chiều rộng màn hình máy tính,
+                    máy tính bảng và điện thoại.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <article class="card content-card">
+                <div class="card-body p-4">
+                  <h3 class="h5 fw-bold">04. Navbar</h3>
+
+                  <p class="text-secondary mb-0">
+                    Navbar cung cấp menu điều hướng, bao gồm dropdown và menu
+                    thu gọn.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- SIDEBAR -->
+        <aside class="col-12 col-lg-4" id="sidebar">
+          <div class="sidebar-box">
+            <p class="section-label mb-2">SIDEBAR</p>
+
+            <h2 class="h4 fw-bold">Thông tin bổ sung</h2>
+
+            <p class="text-secondary">
+              Khu vực này hiển thị thông tin phụ bên cạnh nội dung chính trên
+              màn hình lớn.
+            </p>
+
+            <hr />
+
+            <h3 class="h6 fw-bold">Nội dung bài tập</h3>
+
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item px-0">Bootstrap Container</li>
+
+              <li class="list-group-item px-0">Bootstrap Grid System</li>
+
+              <li class="list-group-item px-0">Responsive Navbar</li>
+
+              <li class="list-group-item px-0">Dropdown Menu</li>
+            </ul>
+
+            <div class="alert alert-primary mt-4 mb-0">
+              <strong>Mẹo:</strong>
+              Thay đổi kích thước trình duyệt để kiểm tra bố cục responsive.
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer py-4" id="footer">
+      <div class="container text-center">
+        <p class="mb-1">© 2026 Bootstrap Responsive Page</p>
+
+        <small> Bài tập thực hành Bootstrap Grid System. </small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript: cần thiết cho dropdown và menu thu gọn -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
