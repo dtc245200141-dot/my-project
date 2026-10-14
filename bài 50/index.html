@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Ký Tài Khoản - Dịch Vụ Của Chúng Tôi</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Google Fonts Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Custom Styles - Tối giản, ưu tiên Bootstrap class */
+      .card-wrapper {
+        border: none;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.12);
+      }
+
+      .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+        min-height: 580px;
+        filter: brightness(0.7);
+      }
+
+      .carousel-caption {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(8px);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        bottom: 3rem;
+      }
+
+      .social-btn {
+        transition: all 0.2s ease-in-out;
+        border: 1px solid #e2e8f0;
+      }
+
+      .social-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        background-color: #f8f9fa;
+      }
+
+      .password-strength-meter {
+        height: 4px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      /* Form animation when switching */
+      .form-section {
+        transition: opacity 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="py-4 py-md-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-11">
+          <div class="card card-wrapper bg-white">
+            <div class="row g-0">
+              <!-- COL 1: CAROUSEL GIỚI THIỆU LỢI ÍCH DỊCH VỤ -->
+              <div class="col-lg-6 d-none d-lg-block position-relative bg-dark">
+                <div
+                  id="serviceCarousel"
+                  class="carousel slide carousel-fade h-100"
+                  data-bs-ride="carousel"
+                  data-bs-interval="4000"
+                >
+                  <!-- Indicators -->
+                  <div class="carousel-indicators mb-4">
+                    <button
+                      type="button"
+                      data-bs-target="#serviceCarousel"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#serviceCarousel"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#serviceCarousel"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+
+                  <!-- Slides -->
+                  <div class="carousel-inner h-100">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active h-100">
+                      <img
+                        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80"
+                        class="d-block w-100"
+                        alt="Làm việc nhóm hiệu quả"
+                      />
+                      <div class="carousel-caption mx-3 text-start">
+                        <div
+                          class="badge bg-primary text-wrap mb-2 px-3 py-2 rounded-pill"
+                        >
+                          <i class="fa-solid fa-rocket me-1"></i> Hiệu Suất Tối
+                          Ưu
+                        </div>
+                        <h3 class="fw-bold text-white mb-2">
+                          Hợp Tác Làm Việc Thông Minh
+                        </h3>
+                        <p class="text-white-50 mb-0">
+                          Tối ưu hóa quy trình làm việc nhóm, chia sẻ dữ liệu
+                          tức thì và quản lý dự án hiệu quả mọi lúc, mọi nơi.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item h-100">
+                      <img
+                        src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80"
+                        class="d-block w-100"
+                        alt="Bảo mật an toàn"
+                      />
+                      <div class="carousel-caption mx-3 text-start">
+                        <div
+                          class="badge bg-success text-wrap mb-2 px-3 py-2 rounded-pill"
+                        >
+                          <i class="fa-solid fa-shield-halved me-1"></i> Bảo Mật
+                          Tuyệt Đối
+                        </div>
+                        <h3 class="fw-bold text-white mb-2">
+                          An Tâm Chuẩn Quốc Tế
+                        </h3>
+                        <p class="text-white-50 mb-0">
+                          Hệ thống mã hóa dữ liệu nhiều lớp giúp bảo vệ thông
+                          tin cá nhân và tài chính của bạn an toàn 100%.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item h-100">
+                      <img
+                        src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=80"
+                        class="d-block w-100"
+                        alt="Hỗ trợ 24/7"
+                      />
+                      <div class="carousel-caption mx-3 text-start">
+                        <div
+                          class="badge bg-warning text-dark text-wrap mb-2 px-3 py-2 rounded-pill"
+                        >
+                          <i class="fa-solid fa-headset me-1"></i> Hỗ Trợ 24/7
+                        </div>
+                        <h3 class="fw-bold text-white mb-2">
+                          Đồng Hành Cùng Bạn
+                        </h3>
+                        <p class="text-white-50 mb-0">
+                          Đội ngũ chuyên viên tận tâm luôn sẵn sàng giải đáp
+                          thắc mắc và hỗ trợ kỹ thuật bất kỳ lúc nào.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Controls -->
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#serviceCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Trước</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#serviceCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Sau</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- COL 2: FORM ĐĂNG KÝ / ĐĂNG NHẬP -->
+              <div
+                class="col-lg-6 p-4 p-sm-5 d-flex flex-column justify-content-center"
+              >
+                <!-- Header Form -->
+                <div class="mb-4">
+                  <h2 class="fw-bold text-dark mb-1" id="formTitle">
+                    Tạo Tài Khoản Mới
+                  </h2>
+                  <p class="text-muted small" id="formSubtitle">
+                    Tham gia cùng hơn 10.000+ người dùng trải nghiệm ngay hôm
+                    nay!
+                  </p>
+                </div>
+
+                <!-- Đăng nhập bằng Mạng Xã Hội -->
+                <div class="row g-2 mb-3">
+                  <div class="col-6">
+                    <button
+                      class="btn btn-light social-btn w-100 py-2 d-flex align-items-center justify-content-center fw-medium text-secondary"
+                      type="button"
+                    >
+                      <svg
+                        class="me-2"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                      >
+                        <path
+                          fill="#4285F4"
+                          d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844a4.14 4.14 0 0 1-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.616z"
+                        />
+                        <path
+                          fill="#34A853"
+                          d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"
+                        />
+                        <path
+                          fill="#FBBC05"
+                          d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+                        />
+                        <path
+                          fill="#EA4335"
+                          d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"
+                        />
+                      </svg>
+                      Google
+                    </button>
+                  </div>
+                  <div class="col-6">
+                    <button
+                      class="btn btn-light social-btn w-100 py-2 d-flex align-items-center justify-content-center fw-medium text-secondary"
+                      type="button"
+                    >
+                      <i
+                        class="fa-brands fa-facebook text-primary me-2 fs-5"
+                      ></i>
+                      Facebook
+                    </button>
+                  </div>
+                </div>
+
+                <div class="position-relative my-3 text-center">
+                  <hr class="text-muted opacity-25" />
+                  <span
+                    class="position-absolute top-50 start-50 translate-middle bg-white px-3 text-muted extra-small fs-7"
+                    >Hoặc bằng Email</span
+                  >
+                </div>
+
+                <!-- FORM ĐĂNG KÝ -->
+                <form id="registerForm" class="needs-validation" novalidate>
+                  <!-- Họ và tên -->
+                  <div class="mb-3">
+                    <label
+                      for="fullName"
+                      class="form-label fw-semibold fs-7 text-dark"
+                      >Họ và tên</label
+                    >
+                    <div class="input-group">
+                      <span
+                        class="input-group-text bg-light border-end-0 text-muted"
+                        ><i class="fa-regular fa-user"></i
+                      ></span>
+                      <input
+                        type="text"
+                        class="form-control border-start-0 ps-0 bg-light"
+                        id="fullName"
+                        placeholder="Nguyễn Văn A"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Vui lòng nhập họ và tên của bạn.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="mb-3">
+                    <label
+                      for="registerEmail"
+                      class="form-label fw-semibold fs-7 text-dark"
+                      >Địa chỉ Email</label
+                    >
+                    <div class="input-group">
+                      <span
+                        class="input-group-text bg-light border-end-0 text-muted"
+                        ><i class="fa-regular fa-envelope"></i
+                      ></span>
+                      <input
+                        type="email"
+                        class="form-control border-start-0 ps-0 bg-light"
+                        id="registerEmail"
+                        placeholder="name@example.com"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Vui lòng nhập email hợp lệ.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mật khẩu -->
+                  <div class="mb-2">
+                    <label
+                      for="registerPassword"
+                      class="form-label fw-semibold fs-7 text-dark"
+                      >Mật khẩu</label
+                    >
+                    <div class="input-group">
+                      <span
+                        class="input-group-text bg-light border-end-0 text-muted"
+                        ><i class="fa-solid fa-lock"></i
+                      ></span>
+                      <input
+                        type="password"
+                        class="form-control border-start-0 border-end-0 ps-0 bg-light"
+                        id="registerPassword"
+                        placeholder="Ít nhất 8 ký tự"
+                        minlength="8"
+                        required
+                      />
+                      <button
+                        class="btn btn-light border border-start-0 text-muted toggle-password"
+                        type="button"
+                        data-target="registerPassword"
+                      >
+                        <i class="fa-regular fa-eye"></i>
+                      </button>
+                      <div class="invalid-feedback">
+                        Mật khẩu tối thiểu 8 ký tự.
+                      </div>
+                    </div>
+                    <!-- Thanh đo độ mạnh mật khẩu -->
+                    <div class="progress mt-2" style="height: 4px">
+                      <div
+                        id="passwordStrengthBar"
+                        class="progress-bar bg-secondary"
+                        role="progressbar"
+                        style="width: 0%"
+                      ></div>
+                    </div>
+                    <small
+                      id="passwordStrengthText"
+                      class="text-muted fs-7 mt-1 d-block"
+                    ></small>
+                  </div>
+
+                  <!-- Xác nhận mật khẩu -->
+                  <div class="mb-3">
+                    <label
+                      for="confirmPassword"
+                      class="form-label fw-semibold fs-7 text-dark"
+                      >Xác nhận mật khẩu</label
+                    >
+                    <div class="input-group">
+                      <span
+                        class="input-group-text bg-light border-end-0 text-muted"
+                        ><i class="fa-solid fa-shield-heart"></i
+                      ></span>
+                      <input
+                        type="password"
+                        class="form-control border-start-0 border-end-0 ps-0 bg-light"
+                        id="confirmPassword"
+                        placeholder="Nhập lại mật khẩu"
+                        required
+                      />
+                      <button
+                        class="btn btn-light border border-start-0 text-muted toggle-password"
+                        type="button"
+                        data-target="confirmPassword"
+                      >
+                        <i class="fa-regular fa-eye"></i>
+                      </button>
+                      <div
+                        class="invalid-feedback"
+                        id="confirmPasswordFeedback"
+                      >
+                        Xác nhận mật khẩu không khớp.
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Checkbox Điều khoản -->
+                  <div class="mb-4 form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="termsCheck"
+                      required
+                    />
+                    <label
+                      class="form-check-label text-muted fs-7"
+                      for="termsCheck"
+                    >
+                      Tôi đồng ý với
+                      <a href="#" class="text-primary text-decoration-none"
+                        >Điều khoản dịch vụ</a
+                      >
+                      &
+                      <a href="#" class="text-primary text-decoration-none"
+                        >Chính sách bảo mật</a
+                      >.
+                    </label>
+                    <div class="invalid-feedback">
+                      Bạn phải đồng ý với điều khoản dịch vụ trước khi đăng ký.
+                    </div>
+                  </div>
+
+                  <!-- Nút Submit -->
+                  <button
+                    type="submit"
+                    class="btn btn-primary w-100 py-2.5 fw-semibold shadow-sm rounded-2"
+                  >
+                    <i class="fa-solid fa-user-plus me-2"></i>Đăng Ký Tài Khoản
+                  </button>
+                </form>
+
+                <!-- Chuyển đổi Đăng nhập / Đăng ký -->
+                <div class="text-center mt-4">
+                  <p class="text-muted mb-0 fs-7">
+                    Đã có tài khoản?
+                    <a
+                      href="#"
+                      id="switchToLogin"
+                      class="text-primary fw-semibold text-decoration-none"
+                      >Đăng nhập ngay</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST THÔNG BÁO THÀNH CÔNG -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div
+        id="successToast"
+        class="toast align-items-center text-white bg-success border-0 shadow-lg"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="d-flex">
+          <div class="toast-body d-flex align-items-center">
+            <i class="fa-solid fa-circle-check fs-4 me-3"></i>
+            <div>
+              <h6 class="fw-bold mb-0">Đăng ký thành công!</h6>
+              <small
+                >Chào mừng bạn đến với hệ thống. Đang chuyển hướng...</small
+              >
+            </div>
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL ĐĂNG NHẬP (MINI) -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg rounded-4">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="fw-bold">Đăng Nhập Tài Khoản</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Mật khẩu</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="••••••••"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary w-100 py-2 fw-semibold"
+              >
+                Đăng Nhập
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Client-side Logic Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const registerForm = document.getElementById("registerForm");
+        const passwordInput = document.getElementById("registerPassword");
+        const confirmPasswordInput = document.getElementById("confirmPassword");
+        const strengthBar = document.getElementById("passwordStrengthBar");
+        const strengthText = document.getElementById("passwordStrengthText");
+
+        // Toggle Hiển thị / Ẩn mật khẩu
+        document.querySelectorAll(".toggle-password").forEach((button) => {
+          button.addEventListener("click", function () {
+            const targetId = this.getAttribute("data-target");
+            const targetInput = document.getElementById(targetId);
+            const icon = this.querySelector("i");
+
+            if (targetInput.type === "password") {
+              targetInput.type = "text";
+              icon.classList.remove("fa-eye");
+              icon.classList.add("fa-eye-slash");
+            } else {
+              targetInput.type = "password";
+              icon.classList.remove("fa-eye-slash");
+              icon.classList.add("fa-eye");
+            }
+          });
+        });
+
+        // Kiểm tra độ mạnh của Mật khẩu
+        passwordInput.addEventListener("input", function () {
+          const val = passwordInput.value;
+          let score = 0;
+
+          if (val.length >= 8) score += 25;
+          if (val.match(/[a-z]/) && val.match(/[A-Z]/)) score += 25;
+          if (val.match(/\d/)) score += 25;
+          if (val.match(/[^a-zA-Z\d]/)) score += 25;
+
+          strengthBar.style.width = score + "%";
+
+          if (score === 0) {
+            strengthBar.className = "progress-bar bg-secondary";
+            strengthText.textContent = "";
+          } else if (score <= 25) {
+            strengthBar.className = "progress-bar bg-danger";
+            strengthText.textContent = "Mật khẩu yếu";
+            strengthText.className = "text-danger fs-7 mt-1 d-block";
+          } else if (score <= 50) {
+            strengthBar.className = "progress-bar bg-warning";
+            strengthText.textContent = "Mật khẩu trung bình";
+            strengthText.className = "text-warning fs-7 mt-1 d-block";
+          } else if (score <= 75) {
+            strengthBar.className = "progress-bar bg-info";
+            strengthText.textContent = "Mật khẩu khá tốt";
+            strengthText.className = "text-info fs-7 mt-1 d-block";
+          } else {
+            strengthBar.className = "progress-bar bg-success";
+            strengthText.textContent = "Mật khẩu rất mạnh";
+            strengthText.className = "text-success fs-7 mt-1 d-block";
+          }
+
+          checkPasswordMatch();
+        });
+
+        // Kiểm tra mật khẩu xác nhận
+        confirmPasswordInput.addEventListener("input", checkPasswordMatch);
+
+        function checkPasswordMatch() {
+          if (confirmPasswordInput.value === "") {
+            confirmPasswordInput.setCustomValidity("");
+            return;
+          }
+
+          if (passwordInput.value !== confirmPasswordInput.value) {
+            confirmPasswordInput.setCustomValidity("Mật khẩu không khớp");
+          } else {
+            confirmPasswordInput.setCustomValidity("");
+          }
+        }
+
+        // Xử lý nộp Form (Validation & Toast notification)
+        registerForm.addEventListener(
+          "submit",
+          function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            checkPasswordMatch();
+
+            if (registerForm.checkValidity()) {
+              // Hiện Toast thông báo thành công
+              const toastEl = document.getElementById("successToast");
+              const toast = new bootstrap.Toast(toastEl, { delay: 3000 });
+              toast.show();
+
+              // Reset Form sau 2s
+              setTimeout(() => {
+                registerForm.reset();
+                registerForm.classList.remove("was-validated");
+                strengthBar.style.width = "0%";
+                strengthText.textContent = "";
+              }, 2000);
+            } else {
+              registerForm.classList.add("was-validated");
+            }
+          },
+          false,
+        );
+
+        // Mở Modal Đăng nhập khi bấm link "Đăng nhập ngay"
+        document
+          .getElementById("switchToLogin")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            const loginModal = new bootstrap.Modal(
+              document.getElementById("loginModal"),
+            );
+            loginModal.show();
+          });
+      });
+    </script>
+  </body>
+</html>
