@@ -1,0 +1,7 @@
+@use "../abstracts/variables" as *; // Dùng "as *" để giữ nguyên tên biến
+
+body {
+  font-family: Arial, sans-serif;
+  color: $text-color;
+  background: $background-color;
+}
