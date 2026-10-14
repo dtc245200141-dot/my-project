@@ -1,0 +1,1104 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone 15 Pro - Apple (VN)</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome 6 Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Google Fonts: SF Pro Display alternative - Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --apple-black: #000000;
+        --apple-dark-gray: #161617;
+        --apple-card-bg: #1d1d1f;
+        --apple-text-gray: #86868b;
+        --apple-text-light: #f5f5f7;
+        --apple-blue: #0071e3;
+        --apple-blue-hover: #0077ed;
+        --apple-titan-natural: #9a958c;
+        --apple-titan-blue: #2d3845;
+        --apple-titan-white: #e3e4e5;
+        --apple-titan-black: #2b2b2c;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: var(--apple-black);
+        color: var(--apple-text-light);
+        overflow-x: hidden;
+        letter-spacing: -0.015em;
+      }
+
+      /* Translucent Glassmorphism Navbar */
+      .apple-nav {
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .apple-subnav {
+        background-color: rgba(22, 22, 23, 0.8);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        top: 52px;
+      }
+
+      /* Typography & Glow */
+      .text-gradient-titanium {
+        background: linear-gradient(135deg, #f5f5f7 0%, #9a958c 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .text-gradient-a17 {
+        background: linear-gradient(
+          135deg,
+          #ff4500 0%,
+          #ff8c00 50%,
+          #ffd700 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .text-apple-gray {
+        color: var(--apple-text-gray);
+      }
+
+      /* Interactive Color Swatches */
+      .color-swatch {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 2px solid transparent;
+      }
+
+      .color-swatch:hover {
+        transform: scale(1.15);
+      }
+
+      .color-swatch.active {
+        border-color: #ffffff;
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+        transform: scale(1.15);
+      }
+
+      /* Phone Variant Image Transition */
+      .product-hero-img {
+        max-height: 520px;
+        object-fit: contain;
+        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s ease;
+      }
+
+      /* Storage Selection Pill */
+      .storage-pill {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: var(--apple-card-bg);
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      .storage-pill:hover,
+      .storage-pill.active {
+        border-color: var(--apple-blue);
+        background: rgba(0, 113, 227, 0.15);
+        color: #fff;
+      }
+
+      /* Glass Cards */
+      .apple-card {
+        background-color: var(--apple-card-bg);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        transition:
+          transform 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .apple-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      }
+
+      /* Buttons */
+      .btn-apple-primary {
+        background-color: var(--apple-blue);
+        color: #ffffff;
+        border-radius: 980px;
+        padding: 10px 22px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border: none;
+      }
+
+      .btn-apple-primary:hover {
+        background-color: var(--apple-blue-hover);
+        color: #ffffff;
+        transform: scale(1.02);
+      }
+
+      .btn-apple-outline {
+        background-color: transparent;
+        color: var(--apple-blue);
+        border: 1px solid var(--apple-blue);
+        border-radius: 980px;
+        padding: 10px 22px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+      }
+
+      .btn-apple-outline:hover {
+        background-color: var(--apple-blue);
+        color: #ffffff;
+      }
+
+      /* Feature Badge Icon Container */
+      .icon-box {
+        width: 60px;
+        height: 60px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #0071e3;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. NAVIGATION BAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top apple-nav py-2"
+      aria-label="Main Navigation"
+    >
+      <div class="container px-3 px-md-5">
+        <a
+          class="navbar-brand text-white fs-4 me-4"
+          href="#"
+          aria-label="Apple Homepage"
+        >
+          <i class="fa-brands fa-apple"></i>
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#appleNavbar"
+          aria-controls="appleNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="appleNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 fs-7 fw-normal">
+            <li class="nav-item">
+              <a class="nav-link text-white-50" href="#overview">Cửa hàng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white-50" href="#overview">Mac</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white-50" href="#overview">iPad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#overview">iPhone</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white-50" href="#overview">Watch</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white-50" href="#overview">AirPods</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white-50" href="#overview">Hỗ trợ</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a href="#" class="text-white-50 fs-5" aria-label="Search"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></a>
+            <a href="#" class="text-white-50 fs-5" aria-label="Bag"
+              ><i class="fa-solid fa-bag-shopping"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sub-Navbar: Product Specific -->
+    <div
+      class="sticky-top apple-subnav py-2 d-none d-md-block"
+      style="z-index: 1020"
+    >
+      <div
+        class="container px-3 px-md-5 d-flex justify-content-between align-items-center"
+      >
+        <span class="fw-bold fs-5 text-white">iPhone 15 Pro</span>
+        <div class="d-flex align-items-center gap-4 fs-7">
+          <a href="#overview" class="text-decoration-none text-white"
+            >Tổng quan</a
+          >
+          <a href="#tech-specs" class="text-decoration-none text-white-50"
+            >Thông số kỹ thuật</a
+          >
+          <a
+            href="#interactive-section"
+            class="btn btn-apple-primary btn-sm px-3 py-1"
+            >Mua ngay</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. HERO SECTION -->
+    <section id="overview" class="pt-5 mt-5 text-center position-relative">
+      <div class="container px-3 px-md-5 py-5">
+        <p
+          class="text-uppercase text-warning fw-semibold fs-7 mb-2 tracking-wider"
+        >
+          Mới Ra Mắt
+        </p>
+        <h1 class="display-2 fw-extrabold text-gradient-titanium mb-3">
+          iPhone 15 Pro
+        </h1>
+        <p class="display-6 fw-bold text-white mb-4">
+          Titanium. Thật bền bỉ. Thật nhẹ nhàng. Thật Pro.
+        </p>
+
+        <div
+          class="d-flex justify-content-center align-items-center gap-3 mb-5"
+        >
+          <a
+            href="#interactive-section"
+            class="btn btn-apple-primary px-4 py-2 fs-6"
+          >
+            <i class="fa-solid fa-cart-shopping me-2"></i>Mua Ngay
+          </a>
+          <a href="#video-demo" class="btn btn-apple-outline px-4 py-2 fs-6">
+            <i class="fa-regular fa-circle-play me-2"></i>Xem Phim Giới Thiệu
+          </a>
+        </div>
+
+        <p class="text-apple-gray fs-6 mb-4">
+          Từ 28.999.000đ hoặc 1.182.000đ/tháng trong 24 tháng
+        </p>
+
+        <!-- Big Banner Graphic -->
+        <div
+          class="position-relative d-flex justify-content-center align-items-center my-4"
+        >
+          <img
+            id="mainHeroImg"
+            src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=1000&q=80"
+            alt="iPhone 15 Pro Titanium Preview"
+            class="img-fluid rounded-4 shadow-lg product-hero-img"
+            style="max-width: 850px; width: 100%"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. INTERACTIVE PRODUCT COLOR & STORAGE PICKER -->
+    <section
+      id="interactive-section"
+      class="py-5 my-5 border-top border-bottom border-dark"
+    >
+      <div class="container px-3 px-md-5">
+        <div class="row g-5 align-items-center">
+          <!-- Left Column: Interactive Product Image -->
+          <div class="col-12 col-lg-7 text-center">
+            <div
+              class="p-4 p-md-5 rounded-5 bg-dark position-relative d-flex align-items-center justify-content-center"
+              style="min-height: 480px"
+            >
+              <span
+                id="colorBadge"
+                class="position-absolute top-0 start-0 m-4 badge bg-secondary text-uppercase px-3 py-2 fs-7"
+                >Titan Tự Nhiên</span
+              >
+              <img
+                id="variantImage"
+                src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80"
+                alt="iPhone 15 Pro Color Variant"
+                class="img-fluid product-hero-img"
+              />
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Selector Form -->
+          <div class="col-12 col-lg-5">
+            <div class="d-flex flex-column gap-4">
+              <div>
+                <span class="text-warning fw-semibold fs-7 uppercase"
+                  >Tùy Chọn Cá Nhân</span
+                >
+                <h2 class="fw-bold text-white display-6 mt-1">
+                  Chọn mẫu iPhone 15 Pro của bạn
+                </h2>
+              </div>
+
+              <!-- Color Selector -->
+              <div>
+                <label class="form-label text-apple-gray fw-medium mb-3">
+                  Màu sắc:
+                  <span id="colorNameText" class="text-white fw-bold"
+                    >Titan Tự Nhiên</span
+                  >
+                </label>
+                <div class="d-flex align-items-center gap-3">
+                  <div
+                    class="color-swatch active"
+                    style="background-color: var(--apple-titan-natural)"
+                    data-color="Titan Tự Nhiên"
+                    data-img="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=800&q=80"
+                    title="Titan Tự Nhiên"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: var(--apple-titan-blue)"
+                    data-color="Titan Xanh"
+                    data-img="https://images.unsplash.com/photo-1695048133021-93c6600a9446?auto=format&fit=crop&w=800&q=80"
+                    title="Titan Xanh"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: var(--apple-titan-white)"
+                    data-color="Titan Trắng"
+                    data-img="https://images.unsplash.com/photo-1695048132924-a74e578c77aa?auto=format&fit=crop&w=800&q=80"
+                    title="Titan Trắng"
+                  ></div>
+                  <div
+                    class="color-swatch"
+                    style="background-color: var(--apple-titan-black)"
+                    data-color="Titan Đen"
+                    data-img="https://images.unsplash.com/photo-1695048132717-3806a64387d8?auto=format&fit=crop&w=800&q=80"
+                    title="Titan Đen"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Storage Selector -->
+              <div>
+                <label class="form-label text-apple-gray fw-medium mb-3"
+                  >Dung lượng lưu trữ:</label
+                >
+                <div class="row g-2">
+                  <div class="col-6">
+                    <div
+                      class="storage-pill active text-center"
+                      data-price="28.999.000"
+                      data-storage="128GB"
+                    >
+                      <div class="fw-bold fs-5">128 GB</div>
+                      <div class="fs-7 text-apple-gray">Bắt đầu từ</div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                      class="storage-pill text-center"
+                      data-price="31.999.000"
+                      data-storage="256GB"
+                    >
+                      <div class="fw-bold fs-5">256 GB</div>
+                      <div class="fs-7 text-apple-gray">+3.000.000đ</div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                      class="storage-pill text-center"
+                      data-price="37.999.000"
+                      data-storage="512GB"
+                    >
+                      <div class="fw-bold fs-5">512 GB</div>
+                      <div class="fs-7 text-apple-gray">+9.000.000đ</div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div
+                      class="storage-pill text-center"
+                      data-price="43.999.000"
+                      data-storage="1TB"
+                    >
+                      <div class="fw-bold fs-5">1 TB</div>
+                      <div class="fs-7 text-apple-gray">+15.000.000đ</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Price Summary & Buy CTA -->
+              <div
+                class="p-4 rounded-4 bg-dark border border-secondary border-opacity-25 mt-2"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <div>
+                    <span class="text-apple-gray fs-7 d-block"
+                      >Giá tổng cộng:</span
+                    >
+                    <span id="displayedPrice" class="fs-3 fw-bold text-white"
+                      >28.999.000đ</span
+                    >
+                  </div>
+                  <span
+                    class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-25 px-3 py-2"
+                    >Có sẵn hàng</span
+                  >
+                </div>
+                <button class="btn btn-apple-primary w-100 py-3 fw-bold fs-6">
+                  <i class="fa-solid fa-bag-shopping me-2"></i>Thêm Vào Giỏ Hàng
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURE HIGHLIGHTS GRID -->
+    <section class="py-5">
+      <div class="container px-3 px-md-5">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <h2 class="display-5 fw-bold text-gradient-titanium mb-3">
+            Khám phá những điểm đột phá.
+          </h2>
+          <p class="text-apple-gray fs-5">
+            Khung Titanium chuẩn hàng không vũ trụ. Chip A17 Pro thay đổi cuộc
+            chơi. Hệ thống camera Pro đa năng nhất từ trước đến nay.
+          </p>
+        </div>
+
+        <!-- Grid Layout using Bootstrap Utilities -->
+        <div class="row g-4">
+          <!-- Card 1: Titanium -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="apple-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div class="icon-box mb-4">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="fw-bold text-white h4 mb-2">Thiết Kế Titanium</h3>
+                <p class="text-apple-gray fs-6">
+                  iPhone đầu tiên sở hữu thiết kế từ Titan chuẩn hàng không vũ
+                  trụ, hợp kim sử dụng trong các sứ mệnh không gian đến Sao Hỏa.
+                </p>
+              </div>
+              <div
+                class="mt-4 pt-3 border-top border-secondary border-opacity-25 d-flex align-items-center justify-content-between"
+              >
+                <span class="text-white-50 fs-7">Trọng lượng nhẹ nhất</span>
+                <i class="fa-solid fa-arrow-right text-primary"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: A17 Pro Chip -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="apple-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div class="icon-box mb-4 text-warning">
+                  <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h3 class="fw-bold text-gradient-a17 h4 mb-2">Chip A17 Pro</h3>
+                <p class="text-apple-gray fs-6">
+                  Quái vật hiệu năng hoàn toàn mới. GPU cấp độ Pro cho trải
+                  nghiệm chơi game đồ họa đỉnh cao chân thực chưa từng có.
+                </p>
+              </div>
+              <div
+                class="mt-4 pt-3 border-top border-secondary border-opacity-25 d-flex align-items-center justify-content-between"
+              >
+                <span class="text-white-50 fs-7">Nhanh hơn đến 20%</span>
+                <i class="fa-solid fa-arrow-right text-warning"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Camera System -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="apple-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div class="icon-box mb-4 text-info">
+                  <i class="fa-solid fa-camera"></i>
+                </div>
+                <h3 class="fw-bold text-white h4 mb-2">Camera Chính 48MP</h3>
+                <p class="text-apple-gray fs-6">
+                  Bắt trọn mọi khoảnh khắc với độ chi tiết kinh ngạc. Tự động
+                  chụp ảnh chân dung thế hệ mới ấn tượng sắc nét.
+                </p>
+              </div>
+              <div
+                class="mt-4 pt-3 border-top border-secondary border-opacity-25 d-flex align-items-center justify-content-between"
+              >
+                <span class="text-white-50 fs-7">Zoom Quang Học 5x</span>
+                <i class="fa-solid fa-arrow-right text-info"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Action Button -->
+          <div class="col-12 col-md-6">
+            <div
+              class="apple-card p-4 p-md-5 h-100 d-flex flex-column flex-md-row align-items-center justify-content-between gap-4"
+            >
+              <div class="flex-grow-1">
+                <div class="icon-box mb-3 text-danger">
+                  <i class="fa-solid fa-toggle-on"></i>
+                </div>
+                <h3 class="fw-bold text-white h4 mb-2">
+                  Nút Tác Vụ (Action Button)
+                </h3>
+                <p class="text-apple-gray fs-6 mb-0">
+                  Phím tắt nhanh đến tính năng yêu thích của bạn. Mở Camera, Bật
+                  Đèn Pin, Ghi Âm hoặc kích hoạt Lối Tắt chỉ với một cú nhấn
+                  giữ.
+                </p>
+              </div>
+              <div
+                class="text-center p-3 rounded-4 bg-black border border-dark"
+              >
+                <i class="fa-solid fa-sliders display-4 text-danger mb-2"></i>
+                <div class="fs-7 text-white-50">Tùy biến linh hoạt</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: USB-C & Battery -->
+          <div class="col-12 col-md-6">
+            <div
+              class="apple-card p-4 p-md-5 h-100 d-flex flex-column flex-md-row align-items-center justify-content-between gap-4"
+            >
+              <div class="flex-grow-1">
+                <div class="icon-box mb-3 text-success">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="fw-bold text-white h4 mb-2">
+                  Kết Nối USB-C & Pin Cả Ngày
+                </h3>
+                <p class="text-apple-gray fs-6 mb-0">
+                  Hỗ trợ USB 3 cho tốc độ truyền dữ liệu vượt trội gấp 20 lần.
+                  Thời lượng pin xem video lên đến 29 giờ liên tục.
+                </p>
+              </div>
+              <div
+                class="text-center p-3 rounded-4 bg-black border border-dark"
+              >
+                <i
+                  class="fa-solid fa-battery-full display-4 text-success mb-2"
+                ></i>
+                <div class="fs-7 text-white-50">29 Giờ Xem Video</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TECH SPECS GRID / BENCHMARK SECTION -->
+    <section id="tech-specs" class="py-5 bg-dark my-5">
+      <div class="container px-3 px-md-5 py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-6">
+            <span class="text-primary fw-semibold fs-7 text-uppercase"
+              >Sức Mạnh Vô Song</span
+            >
+            <h2 class="display-5 fw-bold text-white mt-1 mb-4">
+              A17 Pro. Chiến thắng thuộc về bạn.
+            </h2>
+            <p class="text-apple-gray fs-5 mb-4">
+              GPU đẳng cấp Pro hỗ trợ công nghệ Ray Tracing tăng tốc bằng phần
+              cứng – nhanh hơn gấp 4 lần so với Ray Tracing bằng phần mềm, mang
+              lại đồ họa mượt mà và ánh sáng chân thực như ngoài đời thực.
+            </p>
+
+            <!-- Performance Benchmark Bars -->
+            <div class="d-flex flex-column gap-3">
+              <div>
+                <div
+                  class="d-flex justify-content-between text-white fs-7 mb-1"
+                >
+                  <span>Tốc độ CPU Pro</span>
+                  <span class="fw-bold text-primary">+10% Nhanh Hơn</span>
+                </div>
+                <div class="progress bg-black" style="height: 8px">
+                  <div
+                    class="progress-bar bg-primary"
+                    role="progressbar"
+                    style="width: 90%"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between text-white fs-7 mb-1"
+                >
+                  <span>Hiệu năng GPU Gaming</span>
+                  <span class="fw-bold text-warning">+20% Nhanh Hơn</span>
+                </div>
+                <div class="progress bg-black" style="height: 8px">
+                  <div
+                    class="progress-bar bg-warning"
+                    role="progressbar"
+                    style="width: 95%"
+                    aria-valuenow="95"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between text-white fs-7 mb-1"
+                >
+                  <span>Dẫn đầu công nghệ Ray Tracing</span>
+                  <span class="fw-bold text-danger">Nhanh hơn gấp 4x</span>
+                </div>
+                <div class="progress bg-black" style="height: 8px">
+                  <div
+                    class="progress-bar bg-danger"
+                    role="progressbar"
+                    style="width: 100%"
+                    aria-valuenow="100"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 text-center">
+            <div
+              class="p-4 p-md-5 rounded-5 bg-black border border-secondary border-opacity-25 shadow-lg"
+            >
+              <i
+                class="fa-solid fa-gamepad display-1 text-gradient-a17 mb-3"
+              ></i>
+              <h3 class="fw-bold text-white mb-2">Gaming Đẳng Cấp Console</h3>
+              <p class="text-apple-gray fs-6">
+                Trải nghiệm trực tiếp các tựa game đình đám như Resident Evil
+                Village, Death Stranding ngay trên lòng bàn tay bạn.
+              </p>
+              <div class="row g-3 mt-3">
+                <div class="col-4">
+                  <div
+                    class="p-2 rounded bg-dark border border-secondary border-opacity-10"
+                  >
+                    <div class="fw-bold text-white fs-5">6 Cores</div>
+                    <div class="fs-8 text-apple-gray">GPU Mới</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div
+                    class="p-2 rounded bg-dark border border-secondary border-opacity-10"
+                  >
+                    <div class="fw-bold text-white fs-5">3nm</div>
+                    <div class="fs-8 text-apple-gray">Tiến trình</div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div
+                    class="p-2 rounded bg-dark border border-secondary border-opacity-10"
+                  >
+                    <div class="fw-bold text-white fs-5">16 Cores</div>
+                    <div class="fs-8 text-apple-gray">Neural Engine</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. COMPARISON & HIGHLIGHT CAROUSEL SECTION -->
+    <section class="py-5">
+      <div class="container px-3 px-md-5">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5"
+        >
+          <div>
+            <span class="text-uppercase text-primary fw-semibold fs-7"
+              >So Sánh Mẫu Dòng Pro</span
+            >
+            <h2 class="display-6 fw-bold text-white mt-1">
+              Nên chọn iPhone nào cho bạn?
+            </h2>
+          </div>
+          <a
+            href="#interactive-section"
+            class="btn btn-apple-outline mt-3 mt-md-0"
+            >Xem tất cả thông số
+            <i class="fa-solid fa-chevron-right ms-1 fs-7"></i
+          ></a>
+        </div>
+
+        <!-- Comparison Cards -->
+        <div class="row g-4">
+          <!-- iPhone 15 Pro -->
+          <div class="col-12 col-md-6">
+            <div
+              class="apple-card p-4 p-md-5 h-100 text-center d-flex flex-column justify-content-between"
+            >
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=400&q=80"
+                  alt="iPhone 15 Pro"
+                  class="img-fluid mb-4"
+                  style="height: 220px; object-fit: contain"
+                />
+                <h3 class="fw-bold text-white h4">iPhone 15 Pro</h3>
+                <p class="text-apple-gray fs-6 mb-4">
+                  Trải nghiệm Pro toàn diện trong kích thước gọn gàng.
+                </p>
+                <div class="fs-3 fw-bold text-white mb-4">Từ 28.999.000đ</div>
+
+                <ul
+                  class="list-unstyled text-start d-flex flex-column gap-3 text-apple-gray border-top border-secondary border-opacity-25 pt-4"
+                >
+                  <li class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-mobile-screen text-primary fs-5"></i>
+                    <span>Màn hình Super Retina XDR 6.1" ProMotion 120Hz</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-microchip text-warning fs-5"></i>
+                    <span>Chip A17 Pro với GPU 6 nhân</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-camera text-info fs-5"></i>
+                    <span>Hệ thống Camera Pro 48MP (Zoom 3x)</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-3">
+                    <i
+                      class="fa-solid fa-battery-three-quarters text-success fs-5"
+                    ></i>
+                    <span>Thời gian xem video lên đến 23 giờ</span>
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="#interactive-section"
+                class="btn btn-apple-primary w-100 mt-4"
+                >Chọn iPhone 15 Pro</a
+              >
+            </div>
+          </div>
+
+          <!-- iPhone 15 Pro Max -->
+          <div class="col-12 col-md-6">
+            <div
+              class="apple-card p-4 p-md-5 h-100 text-center d-flex flex-column justify-content-between"
+            >
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1695048133021-93c6600a9446?auto=format&fit=crop&w=400&q=80"
+                  alt="iPhone 15 Pro Max"
+                  class="img-fluid mb-4"
+                  style="height: 220px; object-fit: contain"
+                />
+                <h3 class="fw-bold text-white h4">iPhone 15 Pro Max</h3>
+                <p class="text-apple-gray fs-6 mb-4">
+                  Màn hình cực đại, camera Zoom quang học 5x đỉnh cao.
+                </p>
+                <div class="fs-3 fw-bold text-white mb-4">Từ 34.999.000đ</div>
+
+                <ul
+                  class="list-unstyled text-start d-flex flex-column gap-3 text-apple-gray border-top border-secondary border-opacity-25 pt-4"
+                >
+                  <li class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-mobile-screen text-primary fs-5"></i>
+                    <span>Màn hình Super Retina XDR 6.7" ProMotion 120Hz</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-microchip text-warning fs-5"></i>
+                    <span>Chip A17 Pro với GPU 6 nhân</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-camera text-info fs-5"></i>
+                    <span>Hệ thống Camera Pro 48MP (Zoom 5x Telephoto)</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-3">
+                    <i class="fa-solid fa-battery-full text-success fs-5"></i>
+                    <span>Thời gian xem video lên đến 29 giờ</span>
+                  </li>
+                </ul>
+              </div>
+              <a
+                href="#interactive-section"
+                class="btn btn-apple-outline w-100 mt-4"
+                >Chọn iPhone 15 Pro Max</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. MINIMALIST FOOTER -->
+    <footer
+      class="bg-black pt-5 pb-4 border-top border-dark text-apple-gray fs-7"
+    >
+      <div class="container px-3 px-md-5">
+        <!-- Disclaimers -->
+        <div class="mb-4 pb-3 border-bottom border-dark">
+          <p class="mb-2">
+            1. Thời lượng pin khác nhau tùy theo cách sử dụng và cấu hình. Xem
+            chi tiết tại apple.com/vietnam/batteries.
+          </p>
+          <p class="mb-2">
+            2. Yêu cầu có gói cước dữ liệu. Mạng 5G chỉ khả dụng ở một số thị
+            trường và thông qua một số nhà mạng nhất định.
+          </p>
+          <p class="mb-0">
+            3. Tất cả thông số kỹ thuật có thể thay đổi mà không cần báo trước.
+            Giá hiển thị đã bao gồm thuế VAT áp dụng tại Việt Nam.
+          </p>
+        </div>
+
+        <!-- Breadcrumb Navigation -->
+        <div class="d-flex align-items-center gap-2 mb-4">
+          <i class="fa-brands fa-apple text-white fs-6"></i>
+          <i class="fa-solid fa-chevron-right fs-8"></i>
+          <span>iPhone</span>
+          <i class="fa-solid fa-chevron-right fs-8"></i>
+          <span class="text-white">iPhone 15 Pro</span>
+        </div>
+
+        <!-- Footer Links Columns -->
+        <div class="row g-4 mb-4">
+          <div class="col-6 col-md-3">
+            <h6 class="text-white fw-bold mb-3 fs-7">Khám Phá Sản Phẩm</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >MacBook Pro</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >iPad Pro</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >iPhone 15 Pro</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Apple Watch Ultra 2</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6 class="text-white fw-bold mb-3 fs-7">Tài Khoản & Dịch Vụ</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Quản Lý Apple ID</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >iCloud.com</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Apple Music</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Apple TV+</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6 class="text-white fw-bold mb-3 fs-7">Giá Trị Của Apple</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Hỗ Trợ Tiếp Cận</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Môi Trường</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Bảo Mật Quyền Riêng Tư</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Chuỗi Cung Ứng</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-3">
+            <h6 class="text-white fw-bold mb-3 fs-7">Về Apple</h6>
+            <ul class="list-unstyled d-flex flex-column gap-2">
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Trang Tin Tức</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Lãnh Đạo Apple</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Cơ Hội Việc Làm</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-decoration-none text-apple-gray"
+                  >Nhà Đầu Tư</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright Notice -->
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-3 border-top border-dark"
+        >
+          <p class="mb-2 mb-md-0">
+            Bản quyền © 2026 Apple Inc. Bảo lưu mọi quyền.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-decoration-none text-apple-gray"
+              >Chính Sách Quyền Riêng Tư</a
+            >
+            <a href="#" class="text-decoration-none text-apple-gray"
+              >Điều Khoản Sử Dụng</a
+            >
+            <a href="#" class="text-decoration-none text-apple-gray"
+              >Sơ Đồ Trang Website</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Vanilla JavaScript for Dynamic Interactivity -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Interactive Color Selector
+        const colorSwatches = document.querySelectorAll(".color-swatch");
+        const colorNameText = document.getElementById("colorNameText");
+        const colorBadge = document.getElementById("colorBadge");
+        const variantImage = document.getElementById("variantImage");
+
+        colorSwatches.forEach((swatch) => {
+          swatch.addEventListener("click", function () {
+            colorSwatches.forEach((s) => s.classList.remove("active"));
+            this.classList.add("active");
+
+            const colorName = this.getAttribute("data-color");
+            const newImgUrl = this.getAttribute("data-img");
+
+            colorNameText.textContent = colorName;
+            colorBadge.textContent = colorName;
+
+            // Smooth Image Transition
+            variantImage.style.opacity = "0";
+            variantImage.style.transform = "scale(0.95)";
+
+            setTimeout(() => {
+              variantImage.src = newImgUrl;
+              variantImage.style.opacity = "1";
+              variantImage.style.transform = "scale(1)";
+            }, 200);
+          });
+        });
+
+        // Interactive Storage Selector & Dynamic Pricing Update
+        const storagePills = document.querySelectorAll(".storage-pill");
+        const displayedPrice = document.getElementById("displayedPrice");
+
+        storagePills.forEach((pill) => {
+          pill.addEventListener("click", function () {
+            storagePills.forEach((p) => p.classList.remove("active"));
+            this.classList.add("active");
+
+            const newPrice = this.getAttribute("data-price");
+
+            // Animate Price Text Change
+            displayedPrice.style.opacity = "0";
+            setTimeout(() => {
+              displayedPrice.textContent = newPrice + "đ";
+              displayedPrice.style.opacity = "1";
+            }, 150);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
