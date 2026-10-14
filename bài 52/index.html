@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Web Development Template</title>
+    <!-- Nhập Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@600;700&family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Reset CSS cơ bản - Sửa lỗi selector '*' */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Ubuntu", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+      }
+
+      /* Styling cho Navigation Bar */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 10px 5%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .background {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+          url("https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80");
+        background-blend-mode: darken;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .nav-list {
+        width: 70%;
+        display: flex;
+        align-items: center;
+        list-style: none;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+      }
+
+      .logo img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #3b82f6;
+      }
+
+      .nav-list li {
+        padding: 15px 20px;
+      }
+
+      .nav-list li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-list li a:hover {
+        color: #3b82f6;
+      }
+
+      /* Khắc phục lỗi viết hoa/thường: rightNav */
+      .rightNav {
+        width: 30%;
+        text-align: right;
+      }
+
+      #search {
+        padding: 8px 12px;
+        font-size: 15px;
+        border: 2px solid #4b5563;
+        border-radius: 6px;
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+
+      #search:focus {
+        border-color: #3b82f6;
+      }
+
+      /* Custom Button */
+      .btn {
+        padding: 8px 18px;
+        margin-left: 5px;
+        border: 2px solid #3b82f6;
+        border-radius: 6px;
+        background: #3b82f6;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #2563eb;
+        border-color: #2563eb;
+      }
+
+      .btn-sm {
+        padding: 7px 14px;
+        vertical-align: middle;
+      }
+
+      /* Banner Sections */
+      .firstsection {
+        background: linear-gradient(135deg, #16a34a, #15803d);
+        color: white;
+        min-height: 380px;
+        display: flex;
+        align-items: center;
+      }
+
+      .secondsection {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        color: white;
+        min-height: 380px;
+        display: flex;
+        align-items: center;
+      }
+
+      .box-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 85%;
+        margin: auto;
+        padding: 40px 0;
+      }
+
+      .firstHalf {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .secondHalf {
+        width: 100%;
+      }
+
+      /* Nội dung bài viết chung (Section) */
+      .section {
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 85%;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Đảo ngược thứ tự Hình ảnh và Văn bản */
+      .section-Left {
+        flex-direction: row-reverse;
+      }
+
+      .paras {
+        padding: 0 30px;
+        flex: 1;
+      }
+
+      .thumbnail {
+        flex: 0 0 250px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .thumbnail img {
+        width: 240px;
+        height: 180px;
+        object-fit: cover;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Typography */
+      .text-big {
+        font-family: "Piazzolla", serif;
+        font-weight: 700;
+        font-size: 32px;
+        margin-bottom: 15px;
+      }
+
+      .text-small {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 50px;
+      }
+
+      .text-footer {
+        text-align: center;
+        padding: 25px 0;
+        font-family: "Ubuntu", sans-serif;
+        color: white;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar background">
+      <ul class="nav-list">
+        <div class="logo">
+          <img
+            src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=150&q=80"
+            alt="Logo"
+          />
+        </div>
+        <li><a href="#web">Web Technology</a></li>
+        <li><a href="#program">C Programming</a></li>
+        <li><a href="#java">Java</a></li>
+      </ul>
+
+      <div class="rightNav">
+        <input type="text" name="search" id="search" placeholder="Search..." />
+        <button class="btn btn-sm">Search</button>
+      </div>
+    </nav>
+
+    <!-- Section 1: Web Technology -->
+    <section class="firstsection">
+      <div class="box-main">
+        <div class="firstHalf">
+          <h1 class="text-big" id="web">Web Technology</h1>
+          <p class="text-small">
+            HTML stands for HyperText Markup Language. It is used to design web
+            pages using a markup language. HTML is the combination of Hypertext
+            and Markup language. Hypertext defines the link between the web
+            pages. A markup language is used to define the text document within
+            tag which defines the structure of web pages.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: C Programming -->
+    <section class="secondsection">
+      <div class="box-main">
+        <div class="secondHalf">
+          <h1 class="text-big" id="program">C Programming</h1>
+          <p class="text-small">
+            C is a procedural programming language. It was initially developed
+            by Dennis Ritchie as a system programming language to write
+            operating system. The main features of C language include low-level
+            access to memory, simple set of keywords, and clean style.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Java -->
+    <section class="section" id="java">
+      <div class="paras">
+        <h1 class="sectionTag text-big">Java</h1>
+        <p class="sectionSubTag text-small">
+          Java has been one of the most popular programming languages for many
+          years. Java is Object Oriented. However, it is not considered pure
+          object-oriented as it provides support for primitive data types. The
+          Java codes are first compiled into byte code and then run on the Java
+          Virtual Machine (JVM).
+        </p>
+      </div>
+
+      <div class="thumbnail">
+        <img
+          src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=500&q=80"
+          alt="Laptop code image"
+        />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="background">
+      <p class="text-footer">Copyright &copy; 2026 - All rights reserved</p>
+    </footer>
+  </body>
+</html>
