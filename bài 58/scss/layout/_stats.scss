@@ -1,0 +1,32 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.stats-section {
+  background-color: $dark-bg;
+  color: $white;
+  padding: 50px 0;
+
+  .stats-grid {
+    @include flex-center(row, space-around, center);
+
+    @include respond-to(mobile) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  .stat-item {
+    text-align: center;
+
+    .number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: $secondary-color;
+    }
+
+    .label {
+      font-size: 1rem;
+      color: lighten($dark-bg, 40%);
+    }
+  }
+}

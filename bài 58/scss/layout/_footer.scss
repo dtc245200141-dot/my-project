@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.site-footer {
+  background-color: darken($dark-bg, 5%);
+  color: $white;
+  padding: 40px 0 20px;
+
+  .footer-content {
+    @include flex-center(row, space-between, flex-start);
+    margin-bottom: 30px;
+
+    @include respond-to(mobile) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    color: $text-muted;
+    font-size: 0.9rem;
+  }
+}
