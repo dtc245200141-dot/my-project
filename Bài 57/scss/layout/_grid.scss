@@ -1,0 +1,92 @@
+@use "../abstracts/variables" as *;
+
+.gridwrapper {
+  overflow: auto;
+  position: relative;
+  height: 250px;
+}
+
+.gridcontent {
+  width: $col-width;
+  margin: 0;
+  border-right: 1px solid $default-border;
+  height: 100%;
+  float: left;
+  background-color: #f1f1f1;
+}
+
+/* Layout Overlay Styles */
+.layout-overlay {
+  position: absolute;
+  opacity: 0.9;
+  width: auto;
+  left: 8px;
+  right: 10px;
+  z-index: 2;
+}
+
+.header-wrapper {
+  height: 90px;
+  .header-content {
+    width: 100%;
+    background: $header-bg;
+    border-right-color: transparent;
+  }
+}
+
+.body-wrapper {
+  height: 230px;
+
+  .sidebar-left,
+  .main-right {
+    background-color: $white-bg;
+    border: none;
+    width: $sidebar-width;
+    padding-top: 15px;
+  }
+
+  .sidebar-left .menu-item {
+    background-color: $menu-item-bg;
+    border: none;
+    width: 100%;
+    height: 15%;
+    margin-bottom: 10px;
+  }
+
+  .main-right .content-box {
+    background-color: $menu-item-bg;
+    border: none;
+    width: 100%;
+    height: 92%;
+  }
+
+  .empty-col {
+    background-color: $white-bg;
+    border: none;
+  }
+}
+
+.footer-wrapper {
+  height: 50px;
+  .footer-content {
+    width: 100%;
+    background: $footer-bg;
+    border-right-color: transparent;
+  }
+}
+
+/* Grid Background Lines Styles */
+.grid-background {
+  opacity: 0.1;
+  .full-height {
+    height: 370px;
+  }
+  .border-col {
+    background-color: $white-bg;
+    border-right: 1px solid $grid-border-color;
+
+    &.first-col {
+      border-left: 1px solid $grid-border-color;
+    }
+  }
+}
